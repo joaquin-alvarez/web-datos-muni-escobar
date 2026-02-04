@@ -6,7 +6,9 @@ echo "Running init-app.sh..."
 
 # Generate application key if not set
 if [ -z "$APP_KEY" ]; then
-    php artisan key:generate --force
+    echo "Generating APP_KEY..."
+    php artisan key:generate --force --show
+    echo "APP_KEY has been generated. Please copy it from above and set it in Railway variables."
 fi
 
 # Run migrations
@@ -18,6 +20,6 @@ php artisan route:cache
 php artisan view:cache
 
 # Seed database if needed (optional - remove if not needed in production)
-# php artisan db:seed --force
+php artisan db:seed --force
 
 echo "App initialization complete!"

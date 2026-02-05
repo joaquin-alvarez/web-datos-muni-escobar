@@ -21,7 +21,13 @@ class FormatSeeder extends Seeder
         ];
 
         foreach ($formats as $format) {
-            Format::create($format);
+            Format::updateOrCreate(
+                ['extension' => $format['extension']],
+                [
+                    'name' => $format['name'],
+                    'color' => $format['color']
+                ]
+            );
         }
     }
 }

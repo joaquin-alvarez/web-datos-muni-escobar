@@ -117,26 +117,33 @@ class DatasetSeeder extends Seeder
             
             if (!$category) continue;
 
-            $dataset = Dataset::create([
-                'title' => $datasetData['title'],
-                'slug' => Str::slug($datasetData['title']),
-                'description' => $datasetData['description'],
-                'category_id' => $category->id,
-                'organization' => $datasetData['organization'],
-                'last_modified' => $datasetData['last_modified']
-            ]);
+            $slug = Str::slug($datasetData['title']);
+            
+            $dataset = Dataset::updateOrCreate(
+                ['slug' => $slug],
+                [
+                    'title' => $datasetData['title'],
+                    'description' => $datasetData['description'],
+                    'category_id' => $category->id,
+                    'organization' => $datasetData['organization'],
+                    'last_modified' => $datasetData['last_modified']
+                ]
+            );
 
+            $syncData = [];
             foreach ($datasetData['formats'] as $formatExtension) {
                 $format = Format::where('extension', $formatExtension)->first();
                 
                 if ($format) {
-                    $dataset->formats()->attach($format->id, [
-                        'file_name' => Str::slug($dataset->title) . '.' . $formatExtension,
-                        'file_url' => '/storage/datasets/' . Str::slug($dataset->title) . '.' . $formatExtension,
+                    $syncData[$format->id] = [
+                        'file_name' => $slug . '.' . $formatExtension,
+                        'file_url' => '/storage/datasets/' . $slug . '.' . $formatExtension,
                         'file_size' => rand(50000, 5000000)
-                    ]);
+                    ];
                 }
             }
+            
+            $dataset->formats()->sync($syncData);
         }
     }
 }

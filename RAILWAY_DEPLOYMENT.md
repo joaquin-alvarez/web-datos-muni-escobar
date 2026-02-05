@@ -146,9 +146,6 @@ The connection details will be auto-injected by Railway.
 
 ## Troubleshooting
 
-### Build Fails - Composer Not Found
-- Already fixed in `nixpacks.toml` with `php83Packages.composer`
-
 ### Migration Errors
 - Check database connection
 - Verify environment variables are set correctly

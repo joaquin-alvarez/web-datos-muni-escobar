@@ -212,7 +212,7 @@
                         <li><a href="{{ route('datasets.index') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Datasets</a></li>
                         <li><a href="{{ route('glossary.index') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Glosario</a></li>
                         <li><a href="{{ route('information-request.create') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Solicitar información</a></li>
-                        <li><a href="{{ url('/api/datasets') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>API</a></li>
+                        <li><a href="{{ url('/api/v1/datasets') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>API</a></li>
                     </ul>
                 </div>
                 <div>

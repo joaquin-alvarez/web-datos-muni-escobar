@@ -135,16 +135,38 @@
                     </div>
                 </a>
                 
-                <div class="flex items-center space-x-8">
+                <div class="flex items-center space-x-6">
                     <a href="{{ route('datasets.index') }}" class="nav-link text-gray-700 hover:text-escobar-blue font-semibold text-base pb-1">
                         Datasets
                     </a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-escobar-blue font-semibold text-base pb-1">
-                        Acerca de
+                    <a href="{{ route('glossary.index') }}" class="nav-link text-gray-700 hover:text-escobar-blue font-semibold text-base pb-1">
+                        Glosario
                     </a>
-                    <a href="#" class="gradient-blue text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
-                        <i class="fas fa-search mr-2"></i>
-                        Buscar
+                    <div class="relative group">
+                        <button class="nav-link text-gray-700 hover:text-escobar-blue font-semibold text-base pb-1 flex items-center gap-1">
+                            Gobierno
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="{{ route('government.authorities') }}" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-escobar-blue font-medium transition-colors">
+                                    <i class="fas fa-landmark w-5 mr-2"></i>Autoridades
+                                </a>
+                                <a href="{{ route('government.officials') }}" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-escobar-blue font-medium transition-colors">
+                                    <i class="fas fa-id-card w-5 mr-2"></i>Funcionarios
+                                </a>
+                                <a href="{{ route('government.organisms') }}" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-escobar-blue font-medium transition-colors">
+                                    <i class="fas fa-sitemap w-5 mr-2"></i>Organismos
+                                </a>
+                                <a href="{{ route('government.contact') }}" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-escobar-blue font-medium transition-colors">
+                                    <i class="fas fa-address-book w-5 mr-2"></i>Contacto de Áreas
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ route('information-request.create') }}" class="gradient-blue text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Solicitar Info
                     </a>
                 </div>
             </div>
@@ -157,7 +179,7 @@
 
     <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-escobar-blue-dark text-white mt-20">
         <div class="container mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="bg-white p-2 rounded-lg">
@@ -185,12 +207,21 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold font-heading mb-4 text-white">Enlaces</h3>
+                    <h3 class="text-lg font-semibold font-heading mb-4 text-white">Portal</h3>
                     <ul class="space-y-2.5 text-sm">
                         <li><a href="{{ route('datasets.index') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Datasets</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Política de datos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Términos de uso</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Acerca de</a></li>
+                        <li><a href="{{ route('glossary.index') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Glosario</a></li>
+                        <li><a href="{{ route('information-request.create') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Solicitar información</a></li>
+                        <li><a href="{{ url('/api/datasets') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold font-heading mb-4 text-white">Gobierno</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="{{ route('government.authorities') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Autoridades</a></li>
+                        <li><a href="{{ route('government.officials') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Funcionarios</a></li>
+                        <li><a href="{{ route('government.organisms') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Organismos</a></li>
+                        <li><a href="{{ route('government.contact') }}" class="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all"><i class="fas fa-angle-right mr-2"></i>Contacto de Áreas</a></li>
                     </ul>
                 </div>
                 <div>

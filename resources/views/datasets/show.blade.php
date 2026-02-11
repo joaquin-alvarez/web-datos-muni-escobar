@@ -115,12 +115,49 @@
                         </dt>
                         <dd class="text-gray-800 font-medium">{{ $dataset->organization }}</dd>
                     </div>
+                    @if($dataset->source)
+                    <div class="bg-white/60 p-3 rounded-lg">
+                        <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fas fa-database text-escobar-blue"></i>
+                            Fuente
+                        </dt>
+                        <dd class="text-gray-800 font-medium">{{ $dataset->source }}</dd>
+                    </div>
+                    @endif
+                    <div class="bg-white/60 p-3 rounded-lg">
+                        <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fas fa-code-branch text-escobar-blue"></i>
+                            Versión
+                        </dt>
+                        <dd class="text-gray-800 font-medium">{{ $dataset->version }}</dd>
+                    </div>
+                    <div class="bg-white/60 p-3 rounded-lg">
+                        <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fas fa-sync-alt text-escobar-blue"></i>
+                            Periodicidad
+                        </dt>
+                        <dd class="text-gray-800 font-medium">{{ $dataset->periodicity }}</dd>
+                    </div>
+                    <div class="bg-white/60 p-3 rounded-lg">
+                        <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fas fa-calendar-plus text-escobar-blue"></i>
+                            Fecha de creación
+                        </dt>
+                        <dd class="text-gray-800 font-medium">{{ $dataset->created_date->format('d/m/Y') }}</dd>
+                    </div>
                     <div class="bg-white/60 p-3 rounded-lg">
                         <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">
                             <i class="fas fa-calendar text-escobar-blue"></i>
                             Última actualización
                         </dt>
                         <dd class="text-gray-800 font-medium">{{ $dataset->last_modified->format('d/m/Y') }}</dd>
+                    </div>
+                    <div class="bg-white/60 p-3 rounded-lg">
+                        <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fas fa-balance-scale text-escobar-blue"></i>
+                            Licencia
+                        </dt>
+                        <dd class="text-gray-800 font-medium">{{ $dataset->license }}</dd>
                     </div>
                     <div class="bg-white/60 p-3 rounded-lg">
                         <dt class="text-gray-600 font-semibold mb-1 flex items-center gap-2">

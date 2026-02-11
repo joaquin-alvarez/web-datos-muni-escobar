@@ -15,11 +15,17 @@ class Dataset extends Model
         'description',
         'category_id',
         'organization',
+        'version',
+        'periodicity',
+        'source',
+        'license',
+        'created_date',
         'last_modified'
     ];
 
     protected $casts = [
-        'last_modified' => 'datetime'
+        'last_modified' => 'datetime',
+        'created_date' => 'datetime'
     ];
 
     public function category()

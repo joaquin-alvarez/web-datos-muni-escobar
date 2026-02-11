@@ -19,6 +19,10 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             FormatSeeder::class,
             DatasetSeeder::class,
+            GlossaryTermSeeder::class,
+            OfficialSeeder::class,
+            OrganismSeeder::class,
+            GovernmentAreaSeeder::class,
         ]);
     }
 }

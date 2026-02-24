@@ -11,6 +11,7 @@ class Organism extends Model
 
     protected $fillable = [
         'name', 'slug', 'type', 'description', 'functions',
+        'address', 'phone', 'email',
         'parent_id', 'head_name', 'head_position', 'sort_order'
     ];
 

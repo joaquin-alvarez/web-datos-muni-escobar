@@ -17,7 +17,6 @@
       "chmod +x ./railway/init-app.sh && sh ./railway/init-app.sh"
     ],
     "sleepApplication": false,
-    "useLegacyStacker": false,
     "ipv6EgressEnabled": false,
     "multiRegionConfig": {
       "us-east4-eqdc4a": {

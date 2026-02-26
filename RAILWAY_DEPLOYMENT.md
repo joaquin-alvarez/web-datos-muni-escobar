@@ -44,6 +44,13 @@ CACHE_STORE=file
 # Logging
 LOG_CHANNEL=stack
 LOG_LEVEL=error
+
+# Cloudflare R2 (dataset file storage)
+CLOUDFLARE_R2_ACCESS_KEY_ID=your_r2_access_key
+CLOUDFLARE_R2_SECRET_ACCESS_KEY=your_r2_secret_key
+CLOUDFLARE_R2_BUCKET=datos-escobar
+CLOUDFLARE_R2_ENDPOINT=https://<ACCOUNT_ID>.r2.cloudflarestorage.com
+CLOUDFLARE_R2_URL=https://<YOUR_PUBLIC_BUCKET_DOMAIN>
 ```
 
 ## Deployment Steps
@@ -134,6 +141,70 @@ If you need workers or cron:
    - For worker: `./railway/run-worker.sh`
    - For cron: `./railway/run-cron.sh`
 
+## Cloudflare R2 Setup (Dataset File Storage)
+
+Dataset files (geojson, shp, xlsx, csv) are served from a **Cloudflare R2** bucket.
+R2 is S3-compatible, has a generous free tier (10GB storage, 10M reads/month), and zero egress fees.
+
+### 1. Create R2 Bucket
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → R2 Object Storage
+2. Create a bucket named `datos-escobar`
+3. Enable **public access** on the bucket (Settings → Public access → Allow Access)
+4. Note the public URL (e.g., `https://pub-xxxx.r2.dev`)
+
+### 2. Create API Token
+
+1. In R2 → Manage R2 API Tokens → Create API Token
+2. Permissions: Object Read & Write
+3. Scope: Apply to `datos-escobar` bucket only
+4. Copy the **Access Key ID** and **Secret Access Key**
+5. Note your **Account ID** (visible in the R2 dashboard URL or Overview page)
+
+### 3. Set Environment Variables in Railway
+
+```bash
+railway variables set CLOUDFLARE_R2_ACCESS_KEY_ID="your_access_key_id"
+railway variables set CLOUDFLARE_R2_SECRET_ACCESS_KEY="your_secret_access_key"
+railway variables set CLOUDFLARE_R2_BUCKET="datos-escobar"
+railway variables set CLOUDFLARE_R2_ENDPOINT="https://<ACCOUNT_ID>.r2.cloudflarestorage.com"
+railway variables set CLOUDFLARE_R2_URL="https://pub-xxxx.r2.dev"
+```
+
+### 4. Upload Dataset Files
+
+Place your dataset files locally in `storage/app/public/datasets/` organized as:
+```
+storage/app/public/datasets/
+  centros-de-salud-del-partido-de-escobar/
+    Centros_de_salud.geojson
+    Centros_de_salud.shp
+  jardines-municipales-del-partido-de-escobar/
+    Jardines_municipales.geojson
+    ...
+```
+
+Then upload to R2:
+```bash
+# Dry run (preview without uploading)
+php artisan datasets:upload-to-r2 --dry-run
+
+# Upload
+php artisan datasets:upload-to-r2
+```
+
+Or upload via Railway shell:
+```bash
+railway run php artisan datasets:upload-to-r2
+```
+
+### 5. Re-seed Database
+
+After setting R2 env vars, re-seed so file URLs point to R2:
+```bash
+railway run php artisan db:seed --force
+```
+
 ## Using PostgreSQL Instead of SQLite
 
 1. Add PostgreSQL plugin in Railway
@@ -209,6 +280,8 @@ railway variables
 - [ ] Database configured (SQLite or PostgreSQL)
 - [ ] Migrations run successfully
 - [ ] Seeders run (if needed)
+- [ ] Cloudflare R2 configured (env vars set)
+- [ ] Dataset files uploaded to R2
 - [ ] Application accessible
 
 ## Support

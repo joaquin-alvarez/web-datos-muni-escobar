@@ -6,6 +6,7 @@ use App\Models\Dataset;
 use App\Models\Category;
 use App\Models\Format;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
@@ -29,12 +30,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Centros_de_salud.geojson',
-                        'url' => '/storage/datasets/centros-de-salud-del-partido-de-escobar/Centros_de_salud.geojson',
+                        'path' => 'datasets/centros-de-salud-del-partido-de-escobar/Centros_de_salud.geojson',
                         'size' => 18963,
                     ],
                     [
                         'name' => 'Centros_de_salud.shp',
-                        'url' => '/storage/datasets/centros-de-salud-del-partido-de-escobar/Centros_de_salud.shp',
+                        'path' => 'datasets/centros-de-salud-del-partido-de-escobar/Centros_de_salud.shp',
                         'size' => 940,
                     ],
                 ],
@@ -54,12 +55,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Jardines_municipales.geojson',
-                        'url' => '/storage/datasets/jardines-municipales-del-partido-de-escobar/Jardines_municipales.geojson',
+                        'path' => 'datasets/jardines-municipales-del-partido-de-escobar/Jardines_municipales.geojson',
                         'size' => 3899,
                     ],
                     [
                         'name' => 'Jardines_municipales.shp',
-                        'url' => '/storage/datasets/jardines-municipales-del-partido-de-escobar/Jardines_municipales.shp',
+                        'path' => 'datasets/jardines-municipales-del-partido-de-escobar/Jardines_municipales.shp',
                         'size' => 212,
                     ],
                 ],
@@ -79,12 +80,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'CDIs.geojson',
-                        'url' => '/storage/datasets/centros-de-desarrollo-infantil-del-partido-de-escobar/CDIs.geojson',
+                        'path' => 'datasets/centros-de-desarrollo-infantil-del-partido-de-escobar/CDIs.geojson',
                         'size' => 4055,
                     ],
                     [
                         'name' => 'CDIs.shp',
-                        'url' => '/storage/datasets/centros-de-desarrollo-infantil-del-partido-de-escobar/CDIs.shp',
+                        'path' => 'datasets/centros-de-desarrollo-infantil-del-partido-de-escobar/CDIs.shp',
                         'size' => 296,
                     ],
                 ],
@@ -104,12 +105,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'peligrosidad_inundaciones.geojson',
-                        'url' => '/storage/datasets/peligrosidad-de-inundaciones-partido-de-escobar/peligrosidad_inundaciones.geojson',
+                        'path' => 'datasets/peligrosidad-de-inundaciones-partido-de-escobar/peligrosidad_inundaciones.geojson',
                         'size' => 1604103,
                     ],
                     [
                         'name' => 'peligrosidad_inundaciones.shp',
-                        'url' => '/storage/datasets/peligrosidad-de-inundaciones-partido-de-escobar/peligrosidad_inundaciones.shp',
+                        'path' => 'datasets/peligrosidad-de-inundaciones-partido-de-escobar/peligrosidad_inundaciones.shp',
                         'size' => 477580,
                     ],
                 ],
@@ -129,12 +130,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'zonas_anegamientos_2025.geojson',
-                        'url' => '/storage/datasets/zonas-de-anegamiento-detectadas-a-partir-de-tormentas-2025-partido-de-escobar/zonas_anegamientos_2025.geojson',
+                        'path' => 'datasets/zonas-de-anegamiento-detectadas-a-partir-de-tormentas-2025-partido-de-escobar/zonas_anegamientos_2025.geojson',
                         'size' => 825494,
                     ],
                     [
                         'name' => 'zonas_anegamientos_2025.shp',
-                        'url' => '/storage/datasets/zonas-de-anegamiento-detectadas-a-partir-de-tormentas-2025-partido-de-escobar/zonas_anegamientos_2025.shp',
+                        'path' => 'datasets/zonas-de-anegamiento-detectadas-a-partir-de-tormentas-2025-partido-de-escobar/zonas_anegamientos_2025.shp',
                         'size' => 276240,
                     ],
                 ],
@@ -154,32 +155,32 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'riesgo_ola_calor_verano2021_2022.geojson',
-                        'url' => '/storage/datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2021_2022.geojson',
+                        'path' => 'datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2021_2022.geojson',
                         'size' => 1396843,
                     ],
                     [
                         'name' => 'riesgo_ola_calor_verano2021_2022.shp',
-                        'url' => '/storage/datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2021_2022.shp',
+                        'path' => 'datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2021_2022.shp',
                         'size' => 449940,
                     ],
                     [
                         'name' => 'riesgo_ola_calor_verano2024_2025.geojson',
-                        'url' => '/storage/datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2024_2025.geojson',
+                        'path' => 'datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2024_2025.geojson',
                         'size' => 820145,
                     ],
                     [
                         'name' => 'riesgo_ola_calor_verano2024_2025.shp',
-                        'url' => '/storage/datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2024_2025.shp',
+                        'path' => 'datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2024_2025.shp',
                         'size' => 269020,
                     ],
                     [
                         'name' => 'riesgo_ola_calor_verano2022_2023.geojson',
-                        'url' => '/storage/datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2022_2023.geojson',
+                        'path' => 'datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2022_2023.geojson',
                         'size' => 1510276,
                     ],
                     [
                         'name' => 'riesgo_ola_calor_verano2022_2023.shp',
-                        'url' => '/storage/datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2022_2023.shp',
+                        'path' => 'datasets/riesgo-humano-por-olas-de-calor-partido-de-escobar/riesgo_ola_calor_verano2022_2023.shp',
                         'size' => 454196,
                     ],
                 ],
@@ -199,32 +200,32 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'IVS_medio.geojson',
-                        'url' => '/storage/datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_medio.geojson',
+                        'path' => 'datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_medio.geojson',
                         'size' => 52445,
                     ],
                     [
                         'name' => 'IVS_medio.shp',
-                        'url' => '/storage/datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_medio.shp',
+                        'path' => 'datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_medio.shp',
                         'size' => 9220,
                     ],
                     [
                         'name' => 'IVS_alto.geojson',
-                        'url' => '/storage/datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_alto.geojson',
+                        'path' => 'datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_alto.geojson',
                         'size' => 5205,
                     ],
                     [
                         'name' => 'IVS_alto.shp',
-                        'url' => '/storage/datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_alto.shp',
+                        'path' => 'datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_alto.shp',
                         'size' => 1436,
                     ],
                     [
                         'name' => 'IVS_bajo.geojson',
-                        'url' => '/storage/datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_bajo.geojson',
+                        'path' => 'datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_bajo.geojson',
                         'size' => 801657,
                     ],
                     [
                         'name' => 'IVS_bajo.shp',
-                        'url' => '/storage/datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_bajo.shp',
+                        'path' => 'datasets/indice-de-vulnerabilidad-social-ivs-partido-de-escobar/IVS_bajo.shp',
                         'size' => 170108,
                     ],
                 ],
@@ -244,12 +245,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Indicadores de personas. Radios, 2022 - Escobar.geojson',
-                        'url' => '/storage/datasets/radios-censales-2022-partido-de-escobar/Indicadores de personas. Radios, 2022 - Escobar.geojson',
+                        'path' => 'datasets/radios-censales-2022-partido-de-escobar/Indicadores de personas. Radios, 2022 - Escobar.geojson',
                         'size' => 509311,
                     ],
                     [
                         'name' => 'Indicadores de personas. Radios, 2022 - Escobar.shp',
-                        'url' => '/storage/datasets/radios-censales-2022-partido-de-escobar/Indicadores de personas. Radios, 2022 - Escobar.shp',
+                        'path' => 'datasets/radios-censales-2022-partido-de-escobar/Indicadores de personas. Radios, 2022 - Escobar.shp',
                         'size' => 180564,
                     ],
                 ],
@@ -269,12 +270,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'polideportivos.geojson',
-                        'url' => '/storage/datasets/polideportivos-del-partido-de-escobar/polideportivos.geojson',
+                        'path' => 'datasets/polideportivos-del-partido-de-escobar/polideportivos.geojson',
                         'size' => 2149,
                     ],
                     [
                         'name' => 'polideportivos.shp',
-                        'url' => '/storage/datasets/polideportivos-del-partido-de-escobar/polideportivos.shp',
+                        'path' => 'datasets/polideportivos-del-partido-de-escobar/polideportivos.shp',
                         'size' => 380,
                     ],
                 ],
@@ -294,12 +295,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'seguridad.geojson',
-                        'url' => '/storage/datasets/instalaciones-de-seguridad-del-partido-de-escobar/seguridad.geojson',
+                        'path' => 'datasets/instalaciones-de-seguridad-del-partido-de-escobar/seguridad.geojson',
                         'size' => 17078,
                     ],
                     [
                         'name' => 'seguridad.shp',
-                        'url' => '/storage/datasets/instalaciones-de-seguridad-del-partido-de-escobar/seguridad.shp',
+                        'path' => 'datasets/instalaciones-de-seguridad-del-partido-de-escobar/seguridad.shp',
                         'size' => 1248,
                     ],
                 ],
@@ -319,12 +320,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'AYSA_agua_potable.geojson',
-                        'url' => '/storage/datasets/red-de-distribucion-de-agua-potable-partido-de-escobar/AYSA_agua_potable.geojson',
+                        'path' => 'datasets/red-de-distribucion-de-agua-potable-partido-de-escobar/AYSA_agua_potable.geojson',
                         'size' => 9829,
                     ],
                     [
                         'name' => 'AYSA_agua_potable.shp',
-                        'url' => '/storage/datasets/red-de-distribucion-de-agua-potable-partido-de-escobar/AYSA_agua_potable.shp',
+                        'path' => 'datasets/red-de-distribucion-de-agua-potable-partido-de-escobar/AYSA_agua_potable.shp',
                         'size' => 3028,
                     ],
                 ],
@@ -344,12 +345,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'AYSA_agua.geojson',
-                        'url' => '/storage/datasets/cobertura-del-servicio-de-agua-potable-partido-de-escobar/AYSA_agua.geojson',
+                        'path' => 'datasets/cobertura-del-servicio-de-agua-potable-partido-de-escobar/AYSA_agua.geojson',
                         'size' => 65025,
                     ],
                     [
                         'name' => 'AYSA_agua.shp',
-                        'url' => '/storage/datasets/cobertura-del-servicio-de-agua-potable-partido-de-escobar/AYSA_agua.shp',
+                        'path' => 'datasets/cobertura-del-servicio-de-agua-potable-partido-de-escobar/AYSA_agua.shp',
                         'size' => 20296,
                     ],
                 ],
@@ -369,12 +370,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Plantas_AySA.geojson',
-                        'url' => '/storage/datasets/plantas-aysa-infraestructura-sanitaria-del-partido-de-escobar/Plantas_AySA.geojson',
+                        'path' => 'datasets/plantas-aysa-infraestructura-sanitaria-del-partido-de-escobar/Plantas_AySA.geojson',
                         'size' => 975,
                     ],
                     [
                         'name' => 'Plantas_AySA.shp',
-                        'url' => '/storage/datasets/plantas-aysa-infraestructura-sanitaria-del-partido-de-escobar/Plantas_AySA.shp',
+                        'path' => 'datasets/plantas-aysa-infraestructura-sanitaria-del-partido-de-escobar/Plantas_AySA.shp',
                         'size' => 212,
                     ],
                 ],
@@ -394,12 +395,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'subestaciones_energia.geojson',
-                        'url' => '/storage/datasets/subestaciones-de-energia-del-partido-de-escobar/subestaciones_energia.geojson',
+                        'path' => 'datasets/subestaciones-de-energia-del-partido-de-escobar/subestaciones_energia.geojson',
                         'size' => 1617,
                     ],
                     [
                         'name' => 'subestaciones_energia.shp',
-                        'url' => '/storage/datasets/subestaciones-de-energia-del-partido-de-escobar/subestaciones_energia.shp',
+                        'path' => 'datasets/subestaciones-de-energia-del-partido-de-escobar/subestaciones_energia.shp',
                         'size' => 212,
                     ],
                 ],
@@ -419,12 +420,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'AYSA_cloacas.geojson',
-                        'url' => '/storage/datasets/red-de-distribucion-cloacal-partido-de-escobar/AYSA_cloacas.geojson',
+                        'path' => 'datasets/red-de-distribucion-cloacal-partido-de-escobar/AYSA_cloacas.geojson',
                         'size' => 5339,
                     ],
                     [
                         'name' => 'AYSA_cloacas.shp',
-                        'url' => '/storage/datasets/red-de-distribucion-cloacal-partido-de-escobar/AYSA_cloacas.shp',
+                        'path' => 'datasets/red-de-distribucion-cloacal-partido-de-escobar/AYSA_cloacas.shp',
                         'size' => 1732,
                     ],
                 ],
@@ -444,12 +445,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'estaciones_ferrocarril.geojson',
-                        'url' => '/storage/datasets/estaciones-de-ferrocarril-del-partido-de-escobar/estaciones_ferrocarril.geojson',
+                        'path' => 'datasets/estaciones-de-ferrocarril-del-partido-de-escobar/estaciones_ferrocarril.geojson',
                         'size' => 1062,
                     ],
                     [
                         'name' => 'estaciones_ferrocarril.shp',
-                        'url' => '/storage/datasets/estaciones-de-ferrocarril-del-partido-de-escobar/estaciones_ferrocarril.shp',
+                        'path' => 'datasets/estaciones-de-ferrocarril-del-partido-de-escobar/estaciones_ferrocarril.shp',
                         'size' => 240,
                     ],
                 ],
@@ -469,12 +470,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'linea_ferrocarril.geojson',
-                        'url' => '/storage/datasets/linea-de-ferrocarril-del-partido-de-escobar/linea_ferrocarril.geojson',
+                        'path' => 'datasets/linea-de-ferrocarril-del-partido-de-escobar/linea_ferrocarril.geojson',
                         'size' => 7619,
                     ],
                     [
                         'name' => 'linea_ferrocarril.shp',
-                        'url' => '/storage/datasets/linea-de-ferrocarril-del-partido-de-escobar/linea_ferrocarril.shp',
+                        'path' => 'datasets/linea-de-ferrocarril-del-partido-de-escobar/linea_ferrocarril.shp',
                         'size' => 1704,
                     ],
                 ],
@@ -494,12 +495,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'ejes_calles.geojson',
-                        'url' => '/storage/datasets/ejes-de-calles-del-partido-de-escobar/ejes_calles.geojson',
+                        'path' => 'datasets/ejes-de-calles-del-partido-de-escobar/ejes_calles.geojson',
                         'size' => 4823127,
                     ],
                     [
                         'name' => 'ejes_calles.shp',
-                        'url' => '/storage/datasets/ejes-de-calles-del-partido-de-escobar/ejes_calles.shp',
+                        'path' => 'datasets/ejes-de-calles-del-partido-de-escobar/ejes_calles.shp',
                         'size' => 701592,
                     ],
                 ],
@@ -519,12 +520,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'terminal_omnibus.geojson',
-                        'url' => '/storage/datasets/terminal-de-omnibus-del-partido-de-escobar/terminal_omnibus.geojson',
+                        'path' => 'datasets/terminal-de-omnibus-del-partido-de-escobar/terminal_omnibus.geojson',
                         'size' => 508,
                     ],
                     [
                         'name' => 'terminal_omnibus.shp',
-                        'url' => '/storage/datasets/terminal-de-omnibus-del-partido-de-escobar/terminal_omnibus.shp',
+                        'path' => 'datasets/terminal-de-omnibus-del-partido-de-escobar/terminal_omnibus.shp',
                         'size' => 128,
                     ],
                 ],
@@ -544,12 +545,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'via_nacional.geojson',
-                        'url' => '/storage/datasets/via-nacional-en-el-partido-de-escobar/via_nacional.geojson',
+                        'path' => 'datasets/via-nacional-en-el-partido-de-escobar/via_nacional.geojson',
                         'size' => 15025,
                     ],
                     [
                         'name' => 'via_nacional.shp',
-                        'url' => '/storage/datasets/via-nacional-en-el-partido-de-escobar/via_nacional.shp',
+                        'path' => 'datasets/via-nacional-en-el-partido-de-escobar/via_nacional.shp',
                         'size' => 5224,
                     ],
                 ],
@@ -569,12 +570,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'UGCs.geojson',
-                        'url' => '/storage/datasets/unidades-de-gestion-comunitaria-del-partido-de-escobar/UGCs.geojson',
+                        'path' => 'datasets/unidades-de-gestion-comunitaria-del-partido-de-escobar/UGCs.geojson',
                         'size' => 11977,
                     ],
                     [
                         'name' => 'UGCs.shp',
-                        'url' => '/storage/datasets/unidades-de-gestion-comunitaria-del-partido-de-escobar/UGCs.shp',
+                        'path' => 'datasets/unidades-de-gestion-comunitaria-del-partido-de-escobar/UGCs.shp',
                         'size' => 856,
                     ],
                 ],
@@ -594,12 +595,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'atractivos_turisticos.geojson',
-                        'url' => '/storage/datasets/atractivos-turisticos-del-partido-de-escobar/atractivos_turisticos.geojson',
+                        'path' => 'datasets/atractivos-turisticos-del-partido-de-escobar/atractivos_turisticos.geojson',
                         'size' => 15783,
                     ],
                     [
                         'name' => 'atractivos_turisticos.shp',
-                        'url' => '/storage/datasets/atractivos-turisticos-del-partido-de-escobar/atractivos_turisticos.shp',
+                        'path' => 'datasets/atractivos-turisticos-del-partido-de-escobar/atractivos_turisticos.shp',
                         'size' => 604,
                     ],
                 ],
@@ -619,12 +620,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'ecorregiones.geojson',
-                        'url' => '/storage/datasets/ecorregiones-del-partido-de-escobar/ecorregiones.geojson',
+                        'path' => 'datasets/ecorregiones-del-partido-de-escobar/ecorregiones.geojson',
                         'size' => 61827,
                     ],
                     [
                         'name' => 'ecorregiones.shp',
-                        'url' => '/storage/datasets/ecorregiones-del-partido-de-escobar/ecorregiones.shp',
+                        'path' => 'datasets/ecorregiones-del-partido-de-escobar/ecorregiones.shp',
                         'size' => 20420,
                     ],
                 ],
@@ -659,12 +660,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'areas_verdes.geojson',
-                        'url' => '/storage/datasets/areas-verdes-urbanas-del-partido-de-escobar/areas_verdes.geojson',
+                        'path' => 'datasets/areas-verdes-urbanas-del-partido-de-escobar/areas_verdes.geojson',
                         'size' => 11749266,
                     ],
                     [
                         'name' => 'areas_verdes.shp',
-                        'url' => '/storage/datasets/areas-verdes-urbanas-del-partido-de-escobar/areas_verdes.shp',
+                        'path' => 'datasets/areas-verdes-urbanas-del-partido-de-escobar/areas_verdes.shp',
                         'size' => 5713896,
                     ],
                 ],
@@ -684,12 +685,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'cursos_agua.geojson',
-                        'url' => '/storage/datasets/cursos-de-agua-del-partido-de-escobar/cursos_agua.geojson',
+                        'path' => 'datasets/cursos-de-agua-del-partido-de-escobar/cursos_agua.geojson',
                         'size' => 273614,
                     ],
                     [
                         'name' => 'cursos_agua.shp',
-                        'url' => '/storage/datasets/cursos-de-agua-del-partido-de-escobar/cursos_agua.shp',
+                        'path' => 'datasets/cursos-de-agua-del-partido-de-escobar/cursos_agua.shp',
                         'size' => 84860,
                     ],
                 ],
@@ -709,12 +710,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'map_biomas_2022.geojson',
-                        'url' => '/storage/datasets/clasificacion-de-cobertura-del-suelo-mapbiomas-2022-partido-de-escobar/map_biomas_2022.geojson',
+                        'path' => 'datasets/clasificacion-de-cobertura-del-suelo-mapbiomas-2022-partido-de-escobar/map_biomas_2022.geojson',
                         'size' => 4484983,
                     ],
                     [
                         'name' => 'map_biomas_2022.shp',
-                        'url' => '/storage/datasets/clasificacion-de-cobertura-del-suelo-mapbiomas-2022-partido-de-escobar/map_biomas_2022.shp',
+                        'path' => 'datasets/clasificacion-de-cobertura-del-suelo-mapbiomas-2022-partido-de-escobar/map_biomas_2022.shp',
                         'size' => 1574988,
                     ],
                 ],
@@ -734,12 +735,12 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'plazas_y_parques.geojson',
-                        'url' => '/storage/datasets/plazas-y-parques-del-partido-de-escobar/plazas_y_parques.geojson',
+                        'path' => 'datasets/plazas-y-parques-del-partido-de-escobar/plazas_y_parques.geojson',
                         'size' => 32676,
                     ],
                     [
                         'name' => 'plazas_y_parques.shp',
-                        'url' => '/storage/datasets/plazas-y-parques-del-partido-de-escobar/plazas_y_parques.shp',
+                        'path' => 'datasets/plazas-y-parques-del-partido-de-escobar/plazas_y_parques.shp',
                         'size' => 10244,
                     ],
                 ],
@@ -759,7 +760,7 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Estadísticas vitales 2005 -2022 Escobar.xlsx',
-                        'url' => '/storage/datasets/estadisticas-vitales-2005-2022-escobar/Estadísticas vitales 2005 -2022 Escobar.xlsx',
+                        'path' => 'datasets/estadisticas-vitales-2005-2022-escobar/Estadísticas vitales 2005 -2022 Escobar.xlsx',
                         'size' => 12927,
                     ],
                 ],
@@ -779,7 +780,7 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Población por sexo según radio Censal - Censo_2022_radio.csv',
-                        'url' => '/storage/datasets/poblacion-por-sexo-segun-radio-censal-censo-2022-radio/Población por sexo según radio Censal - Censo_2022_radio.csv',
+                        'path' => 'datasets/poblacion-por-sexo-segun-radio-censal-censo-2022-radio/Población por sexo según radio Censal - Censo_2022_radio.csv',
                         'size' => 6824,
                     ],
                 ],
@@ -799,7 +800,7 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'Farmacias_Escobar.xlsx',
-                        'url' => '/storage/datasets/farmacias-escobar/Farmacias_Escobar.xlsx',
+                        'path' => 'datasets/farmacias-escobar/Farmacias_Escobar.xlsx',
                         'size' => 12571,
                     ],
                 ],
@@ -819,7 +820,7 @@ class DatasetSeeder extends Seeder
                 'files' => [
                     [
                         'name' => 'centros_medicos_unificado_escobar_version_completa.xlsx',
-                        'url' => '/storage/datasets/centros-medicos-unificado-escobar-version-completa/centros_medicos_unificado_escobar_version_completa.xlsx',
+                        'path' => 'datasets/centros-medicos-unificado-escobar-version-completa/centros_medicos_unificado_escobar_version_completa.xlsx',
                         'size' => 28252,
                     ],
                 ],
@@ -861,7 +862,7 @@ class DatasetSeeder extends Seeder
                 if ($format) {
                     $syncData[$format->id] = [
                         'file_name' => $fileInfo['name'],
-                        'file_url' => $fileInfo['url'],
+                        'file_url' => $this->resolveFileUrl($fileInfo['path']),
                         'file_size' => $fileInfo['size']
                     ];
                 }
@@ -873,5 +874,16 @@ class DatasetSeeder extends Seeder
         }
         
         echo "\n✓ Carga completa: " . count($datasets) . " datasets\n";
+    }
+
+    private function resolveFileUrl(string $path): string
+    {
+        $r2Url = rtrim(config('filesystems.disks.r2.url', ''), '/');
+
+        if ($r2Url) {
+            return $r2Url . '/' . $path;
+        }
+
+        return '/storage/' . $path;
     }
 }

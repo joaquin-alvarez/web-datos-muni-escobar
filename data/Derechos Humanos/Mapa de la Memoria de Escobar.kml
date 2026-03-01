@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mapa de la Memoria de Escobar</name>
+    <description>Puntos de interés en el partido de Escobar relacionados con la dictadura cívico-militar acontecida entre los años - .</description>
+    <NetworkLink>
+      <name>Mapa de la Memoria de Escobar</name>
+      <Link>
+        <href><![CDATA[https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=13x9HYSclZI3Z7SQLwu8veJ83oPwRlW4]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>

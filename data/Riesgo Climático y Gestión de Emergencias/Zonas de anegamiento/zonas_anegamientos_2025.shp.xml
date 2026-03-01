@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="es"><Esri><CreaDate>20260123</CreaDate><CreaTime>11353600</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\RasterToPolygon" Date="20260123" Time="113536">RasterToPolygon Agua_MNDWI_Escobar_202505.tif "D:\Escobar sostenible - copia\SIG\PORTAL DE DATOS\zonas_anegamientos_2025.shp" SIMPLIFY Value SINGLE_OUTER_PART #</Process></lineage></DataProperties></Esri></metadata>

@@ -75,7 +75,7 @@ Option A - Via CLI:
 railway variables set APP_ENV=production
 railway variables set APP_DEBUG=false
 railway variables set APP_URL=https://your-app.up.railway.app
-railway variables set DB_CONNECTION=sqlite
+railway variables set DB_CONNECTION=pgsql
 ```
 
 Option B - Via Railway Dashboard:

@@ -15,6 +15,7 @@ class CategorySeeder extends Seeder
             ['name' => 'Cultura', 'icon' => 'fa-palette'],
             ['name' => 'Deporte', 'icon' => 'fa-futbol'],
             ['name' => 'Derechos Humanos', 'icon' => 'fa-hand-holding-heart'],
+            ['name' => 'Educación', 'icon' => 'fa-graduation-cap'],
             ['name' => 'Economía y Finanzas', 'icon' => 'fa-chart-line'],
             ['name' => 'Hábitat, Vivienda y Desarrollo Social', 'icon' => 'fa-home'],
             ['name' => 'Infraestructura y Servicios Públicos', 'icon' => 'fa-tools'],

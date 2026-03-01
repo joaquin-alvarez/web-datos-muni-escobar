@@ -22,7 +22,4 @@ php artisan view:cache
 # Seed database if needed (optional - remove if not needed in production)
 php artisan db:seed --force
 
-# Create session table
-php artisan session:table
-
 echo "App initialization complete!"

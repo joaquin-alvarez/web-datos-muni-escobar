@@ -79,7 +79,7 @@ def convert_docx_files_recursive(data_dir):
     print(f"Errors: {error_count} files")
 
 if __name__ == "__main__":
-    data_directory = "/home/JA/development/web-datos-muni-escobar/data"
+    data_directory = "/home/ja/development/web-datos-muni-escobar/data"
     
     if len(sys.argv) > 1:
         data_directory = sys.argv[1]

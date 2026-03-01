@@ -1,0 +1,162 @@
+================================================================================
+FILE SIZE REPORT FOR SEEDER UPDATE
+================================================================================
+
+Dataset: centros-de-salud-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  Centros_de_salud.geojson: 18963 bytes
+  Centros_de_salud.shp: 940 bytes
+
+Dataset: jardines-municipales-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  Jardines_municipales.geojson: 3899 bytes
+  Jardines_municipales.shp: 212 bytes
+
+Dataset: centros-de-desarrollo-infantil-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  CDIs.geojson: 4055 bytes
+  CDIs.shp: 296 bytes
+
+Dataset: peligrosidad-de-inundaciones-partido-de-escobar
+--------------------------------------------------------------------------------
+  peligrosidad_inundaciones.geojson: 1604103 bytes
+  peligrosidad_inundaciones.shp: 477580 bytes
+
+Dataset: zonas-de-anegamiento-detectadas-a-partir-de-tormentas-2025-partido-de-escobar
+--------------------------------------------------------------------------------
+  zonas_anegamientos_2025.geojson: 825494 bytes
+  zonas_anegamientos_2025.shp: 276240 bytes
+
+Dataset: riesgo-humano-por-olas-de-calor-partido-de-escobar
+--------------------------------------------------------------------------------
+  riesgo_ola_calor_verano2021_2022.geojson: 1396843 bytes
+  riesgo_ola_calor_verano2021_2022.shp: 449940 bytes
+  riesgo_ola_calor_verano2024_2025.geojson: 820145 bytes
+  riesgo_ola_calor_verano2024_2025.shp: 269020 bytes
+  riesgo_ola_calor_verano2022_2023.geojson: 1510276 bytes
+  riesgo_ola_calor_verano2022_2023.shp: 454196 bytes
+
+Dataset: indice-de-vulnerabilidad-social-ivs-partido-de-escobar
+--------------------------------------------------------------------------------
+  IVS_medio.geojson: 52445 bytes
+  IVS_medio.shp: 9220 bytes
+  IVS_alto.geojson: 5205 bytes
+  IVS_alto.shp: 1436 bytes
+  IVS_bajo.geojson: 801657 bytes
+  IVS_bajo.shp: 170108 bytes
+
+Dataset: radios-censales-2022-partido-de-escobar
+--------------------------------------------------------------------------------
+  Indicadores de personas. Radios, 2022 - Escobar.geojson: 509311 bytes
+  Indicadores de personas. Radios, 2022 - Escobar.shp: 180564 bytes
+
+Dataset: polideportivos-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  polideportivos.geojson: 2149 bytes
+  polideportivos.shp: 380 bytes
+
+Dataset: instalaciones-de-seguridad-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  seguridad.geojson: 17078 bytes
+  seguridad.shp: 1248 bytes
+
+Dataset: red-de-distribucion-de-agua-potable-partido-de-escobar
+--------------------------------------------------------------------------------
+  AYSA_agua_potable.geojson: 9829 bytes
+  AYSA_agua_potable.shp: 3028 bytes
+
+Dataset: cobertura-del-servicio-de-agua-potable-partido-de-escobar
+--------------------------------------------------------------------------------
+  AYSA_agua.geojson: 65025 bytes
+  AYSA_agua.shp: 20296 bytes
+
+Dataset: plantas-aysa-infraestructura-sanitaria-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  Plantas_AySA.geojson: 975 bytes
+  Plantas_AySA.shp: 212 bytes
+
+Dataset: subestaciones-de-energia-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  subestaciones_energia.geojson: 1617 bytes
+  subestaciones_energia.shp: 212 bytes
+
+Dataset: red-de-distribucion-cloacal-partido-de-escobar
+--------------------------------------------------------------------------------
+  AYSA_cloacas.geojson: 5339 bytes
+  AYSA_cloacas.shp: 1732 bytes
+
+Dataset: estaciones-de-ferrocarril-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  estaciones_ferrocarril.geojson: 1062 bytes
+  estaciones_ferrocarril.shp: 240 bytes
+
+Dataset: linea-de-ferrocarril-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  linea_ferrocarril.geojson: 7619 bytes
+  linea_ferrocarril.shp: 1704 bytes
+
+Dataset: ejes-de-calles-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  ejes_calles.geojson: 4823127 bytes
+  ejes_calles.shp: 701592 bytes
+
+Dataset: terminal-de-omnibus-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  terminal_omnibus.geojson: 508 bytes
+  terminal_omnibus.shp: 128 bytes
+
+Dataset: via-nacional-en-el-partido-de-escobar
+--------------------------------------------------------------------------------
+  via_nacional.geojson: 15025 bytes
+  via_nacional.shp: 5224 bytes
+
+Dataset: unidades-de-gestion-comunitaria-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  UGCs.geojson: 11977 bytes
+  UGCs.shp: 856 bytes
+
+Dataset: atractivos-turisticos-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  atractivos_turisticos.geojson: 15783 bytes
+  atractivos_turisticos.shp: 604 bytes
+
+Dataset: ecorregiones-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  ecorregiones.geojson: 61827 bytes
+  ecorregiones.shp: 20420 bytes
+
+Dataset: areas-verdes-urbanas-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  areas_verdes.geojson: 11749266 bytes
+  areas_verdes.shp: 5713896 bytes
+
+Dataset: cursos-de-agua-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  cursos_agua.geojson: 273614 bytes
+  cursos_agua.shp: 84860 bytes
+
+Dataset: clasificacion-de-cobertura-del-suelo-mapbiomas-2022-partido-de-escobar
+--------------------------------------------------------------------------------
+  map_biomas_2022.geojson: 4484983 bytes
+  map_biomas_2022.shp: 1574988 bytes
+
+Dataset: plazas-y-parques-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  plazas_y_parques.geojson: 32676 bytes
+  plazas_y_parques.shp: 10244 bytes
+
+Dataset: estadisticas-vitales-2005-2022-escobar
+--------------------------------------------------------------------------------
+  Estadísticas vitales 2005 -2022 Escobar.xlsx: 12927 bytes
+
+Dataset: poblacion-por-sexo-segun-radio-censal-censo-2022-radio
+--------------------------------------------------------------------------------
+  Población por sexo según radio Censal - Censo_2022_radio.csv: 6824 bytes
+
+Dataset: farmacias-escobar
+--------------------------------------------------------------------------------
+  Farmacias_Escobar.xlsx: 12571 bytes
+
+Dataset: centros-medicos-unificado-escobar-version-completa
+--------------------------------------------------------------------------------
+  centros_medicos_unificado_escobar_version_completa.xlsx: 28252 bytes

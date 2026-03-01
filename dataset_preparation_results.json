@@ -1,0 +1,514 @@
+[
+  {
+    "slug": "centros-de-salud-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "Centros_de_salud",
+        "geojson": {
+          "filename": "Centros_de_salud.geojson",
+          "size": 18963
+        },
+        "shp": {
+          "filename": "Centros_de_salud.shp",
+          "size": 940
+        }
+      }
+    ]
+  },
+  {
+    "slug": "jardines-municipales-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "Jardines_municipales",
+        "geojson": {
+          "filename": "Jardines_municipales.geojson",
+          "size": 3899
+        },
+        "shp": {
+          "filename": "Jardines_municipales.shp",
+          "size": 212
+        }
+      }
+    ]
+  },
+  {
+    "slug": "centros-de-desarrollo-infantil-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "CDIs",
+        "geojson": {
+          "filename": "CDIs.geojson",
+          "size": 4055
+        },
+        "shp": {
+          "filename": "CDIs.shp",
+          "size": 296
+        }
+      }
+    ]
+  },
+  {
+    "slug": "peligrosidad-de-inundaciones-partido-de-escobar",
+    "files": [
+      {
+        "name": "peligrosidad_inundaciones",
+        "geojson": {
+          "filename": "peligrosidad_inundaciones.geojson",
+          "size": 1604103
+        },
+        "shp": {
+          "filename": "peligrosidad_inundaciones.shp",
+          "size": 477580
+        }
+      }
+    ]
+  },
+  {
+    "slug": "zonas-de-anegamiento-detectadas-a-partir-de-tormentas-2025-partido-de-escobar",
+    "files": [
+      {
+        "name": "zonas_anegamientos_2025",
+        "geojson": {
+          "filename": "zonas_anegamientos_2025.geojson",
+          "size": 825494
+        },
+        "shp": {
+          "filename": "zonas_anegamientos_2025.shp",
+          "size": 276240
+        }
+      }
+    ]
+  },
+  {
+    "slug": "riesgo-humano-por-olas-de-calor-partido-de-escobar",
+    "files": [
+      {
+        "name": "riesgo_ola_calor_verano2021_2022",
+        "geojson": {
+          "filename": "riesgo_ola_calor_verano2021_2022.geojson",
+          "size": 1396843
+        },
+        "shp": {
+          "filename": "riesgo_ola_calor_verano2021_2022.shp",
+          "size": 449940
+        }
+      },
+      {
+        "name": "riesgo_ola_calor_verano2024_2025",
+        "geojson": {
+          "filename": "riesgo_ola_calor_verano2024_2025.geojson",
+          "size": 820145
+        },
+        "shp": {
+          "filename": "riesgo_ola_calor_verano2024_2025.shp",
+          "size": 269020
+        }
+      },
+      {
+        "name": "riesgo_ola_calor_verano2022_2023",
+        "geojson": {
+          "filename": "riesgo_ola_calor_verano2022_2023.geojson",
+          "size": 1510276
+        },
+        "shp": {
+          "filename": "riesgo_ola_calor_verano2022_2023.shp",
+          "size": 454196
+        }
+      }
+    ]
+  },
+  {
+    "slug": "indice-de-vulnerabilidad-social-ivs-partido-de-escobar",
+    "files": [
+      {
+        "name": "IVS_medio",
+        "geojson": {
+          "filename": "IVS_medio.geojson",
+          "size": 52445
+        },
+        "shp": {
+          "filename": "IVS_medio.shp",
+          "size": 9220
+        }
+      },
+      {
+        "name": "IVS_alto",
+        "geojson": {
+          "filename": "IVS_alto.geojson",
+          "size": 5205
+        },
+        "shp": {
+          "filename": "IVS_alto.shp",
+          "size": 1436
+        }
+      },
+      {
+        "name": "IVS_bajo",
+        "geojson": {
+          "filename": "IVS_bajo.geojson",
+          "size": 801657
+        },
+        "shp": {
+          "filename": "IVS_bajo.shp",
+          "size": 170108
+        }
+      }
+    ]
+  },
+  {
+    "slug": "radios-censales-2022-partido-de-escobar",
+    "files": [
+      {
+        "name": "Indicadores de personas. Radios, 2022 - Escobar",
+        "geojson": {
+          "filename": "Indicadores de personas. Radios, 2022 - Escobar.geojson",
+          "size": 509311
+        },
+        "shp": {
+          "filename": "Indicadores de personas. Radios, 2022 - Escobar.shp",
+          "size": 180564
+        }
+      }
+    ]
+  },
+  {
+    "slug": "polideportivos-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "polideportivos",
+        "geojson": {
+          "filename": "polideportivos.geojson",
+          "size": 2149
+        },
+        "shp": {
+          "filename": "polideportivos.shp",
+          "size": 380
+        }
+      }
+    ]
+  },
+  {
+    "slug": "instalaciones-de-seguridad-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "seguridad",
+        "geojson": {
+          "filename": "seguridad.geojson",
+          "size": 17078
+        },
+        "shp": {
+          "filename": "seguridad.shp",
+          "size": 1248
+        }
+      }
+    ]
+  },
+  {
+    "slug": "red-de-distribucion-de-agua-potable-partido-de-escobar",
+    "files": [
+      {
+        "name": "AYSA_agua_potable",
+        "geojson": {
+          "filename": "AYSA_agua_potable.geojson",
+          "size": 9829
+        },
+        "shp": {
+          "filename": "AYSA_agua_potable.shp",
+          "size": 3028
+        }
+      }
+    ]
+  },
+  {
+    "slug": "cobertura-del-servicio-de-agua-potable-partido-de-escobar",
+    "files": [
+      {
+        "name": "AYSA_agua",
+        "geojson": {
+          "filename": "AYSA_agua.geojson",
+          "size": 65025
+        },
+        "shp": {
+          "filename": "AYSA_agua.shp",
+          "size": 20296
+        }
+      }
+    ]
+  },
+  {
+    "slug": "plantas-aysa-infraestructura-sanitaria-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "Plantas_AySA",
+        "geojson": {
+          "filename": "Plantas_AySA.geojson",
+          "size": 975
+        },
+        "shp": {
+          "filename": "Plantas_AySA.shp",
+          "size": 212
+        }
+      }
+    ]
+  },
+  {
+    "slug": "subestaciones-de-energia-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "subestaciones_energia",
+        "geojson": {
+          "filename": "subestaciones_energia.geojson",
+          "size": 1617
+        },
+        "shp": {
+          "filename": "subestaciones_energia.shp",
+          "size": 212
+        }
+      }
+    ]
+  },
+  {
+    "slug": "red-de-distribucion-cloacal-partido-de-escobar",
+    "files": [
+      {
+        "name": "AYSA_cloacas",
+        "geojson": {
+          "filename": "AYSA_cloacas.geojson",
+          "size": 5339
+        },
+        "shp": {
+          "filename": "AYSA_cloacas.shp",
+          "size": 1732
+        }
+      }
+    ]
+  },
+  {
+    "slug": "estaciones-de-ferrocarril-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "estaciones_ferrocarril",
+        "geojson": {
+          "filename": "estaciones_ferrocarril.geojson",
+          "size": 1062
+        },
+        "shp": {
+          "filename": "estaciones_ferrocarril.shp",
+          "size": 240
+        }
+      }
+    ]
+  },
+  {
+    "slug": "linea-de-ferrocarril-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "linea_ferrocarril",
+        "geojson": {
+          "filename": "linea_ferrocarril.geojson",
+          "size": 7619
+        },
+        "shp": {
+          "filename": "linea_ferrocarril.shp",
+          "size": 1704
+        }
+      }
+    ]
+  },
+  {
+    "slug": "ejes-de-calles-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "ejes_calles",
+        "geojson": {
+          "filename": "ejes_calles.geojson",
+          "size": 4823127
+        },
+        "shp": {
+          "filename": "ejes_calles.shp",
+          "size": 701592
+        }
+      }
+    ]
+  },
+  {
+    "slug": "terminal-de-omnibus-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "terminal_omnibus",
+        "geojson": {
+          "filename": "terminal_omnibus.geojson",
+          "size": 508
+        },
+        "shp": {
+          "filename": "terminal_omnibus.shp",
+          "size": 128
+        }
+      }
+    ]
+  },
+  {
+    "slug": "via-nacional-en-el-partido-de-escobar",
+    "files": [
+      {
+        "name": "via_nacional",
+        "geojson": {
+          "filename": "via_nacional.geojson",
+          "size": 15025
+        },
+        "shp": {
+          "filename": "via_nacional.shp",
+          "size": 5224
+        }
+      }
+    ]
+  },
+  {
+    "slug": "unidades-de-gestion-comunitaria-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "UGCs",
+        "geojson": {
+          "filename": "UGCs.geojson",
+          "size": 11977
+        },
+        "shp": {
+          "filename": "UGCs.shp",
+          "size": 856
+        }
+      }
+    ]
+  },
+  {
+    "slug": "atractivos-turisticos-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "atractivos_turisticos",
+        "geojson": {
+          "filename": "atractivos_turisticos.geojson",
+          "size": 15783
+        },
+        "shp": {
+          "filename": "atractivos_turisticos.shp",
+          "size": 604
+        }
+      }
+    ]
+  },
+  {
+    "slug": "ecorregiones-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "ecorregiones",
+        "geojson": {
+          "filename": "ecorregiones.geojson",
+          "size": 61827
+        },
+        "shp": {
+          "filename": "ecorregiones.shp",
+          "size": 20420
+        }
+      }
+    ]
+  },
+  {
+    "slug": "areas-verdes-urbanas-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "areas_verdes",
+        "geojson": {
+          "filename": "areas_verdes.geojson",
+          "size": 11749266
+        },
+        "shp": {
+          "filename": "areas_verdes.shp",
+          "size": 5713896
+        }
+      }
+    ]
+  },
+  {
+    "slug": "cursos-de-agua-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "cursos_agua",
+        "geojson": {
+          "filename": "cursos_agua.geojson",
+          "size": 273614
+        },
+        "shp": {
+          "filename": "cursos_agua.shp",
+          "size": 84860
+        }
+      }
+    ]
+  },
+  {
+    "slug": "clasificacion-de-cobertura-del-suelo-mapbiomas-2022-partido-de-escobar",
+    "files": [
+      {
+        "name": "map_biomas_2022",
+        "geojson": {
+          "filename": "map_biomas_2022.geojson",
+          "size": 4484983
+        },
+        "shp": {
+          "filename": "map_biomas_2022.shp",
+          "size": 1574988
+        }
+      }
+    ]
+  },
+  {
+    "slug": "plazas-y-parques-del-partido-de-escobar",
+    "files": [
+      {
+        "name": "plazas_y_parques",
+        "geojson": {
+          "filename": "plazas_y_parques.geojson",
+          "size": 32676
+        },
+        "shp": {
+          "filename": "plazas_y_parques.shp",
+          "size": 10244
+        }
+      }
+    ]
+  },
+  {
+    "slug": "estadisticas-vitales-2005-2022-escobar",
+    "files": [
+      {
+        "name": "Estadísticas vitales 2005 -2022 Escobar.xlsx",
+        "size": 12927
+      }
+    ]
+  },
+  {
+    "slug": "poblacion-por-sexo-segun-radio-censal-censo-2022-radio",
+    "files": [
+      {
+        "name": "Población por sexo según radio Censal - Censo_2022_radio.csv",
+        "size": 6824
+      }
+    ]
+  },
+  {
+    "slug": "farmacias-escobar",
+    "files": [
+      {
+        "name": "Farmacias_Escobar.xlsx",
+        "size": 12571
+      }
+    ]
+  },
+  {
+    "slug": "centros-medicos-unificado-escobar-version-completa",
+    "files": [
+      {
+        "name": "centros_medicos_unificado_escobar_version_completa.xlsx",
+        "size": 28252
+      }
+    ]
+  }
+]

@@ -23,6 +23,6 @@ php artisan view:cache
 php artisan db:seed --force
 
 # Create session table
-railway run php artisan session:table
+php artisan session:table
 
 echo "App initialization complete!"

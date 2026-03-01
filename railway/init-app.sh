@@ -4,6 +4,12 @@ set -e
 
 echo "Running init-app.sh..."
 
+# Set APP_URL from Railway's PUBLIC_URL if not already set
+if [ -z "$APP_URL" ] && [ -n "$RAILWAY_PUBLIC_DOMAIN" ]; then
+    export APP_URL="https://${RAILWAY_PUBLIC_DOMAIN}"
+    echo "APP_URL set to: $APP_URL"
+fi
+
 # Generate application key if not set
 if [ -z "$APP_KEY" ]; then
     echo "Generating APP_KEY..."

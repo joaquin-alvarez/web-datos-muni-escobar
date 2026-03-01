@@ -171,6 +171,11 @@ railway variables set CLOUDFLARE_R2_ENDPOINT="https://<ACCOUNT_ID>.r2.cloudflare
 railway variables set CLOUDFLARE_R2_URL="https://pub-xxxx.r2.dev"
 ```
 
+**Important - HTTPS for Filament**: 
+- The `init-app.sh` script automatically sets `APP_URL` to HTTPS using Railway's `RAILWAY_PUBLIC_DOMAIN` variable
+- Additionally, `AppServiceProvider` forces HTTPS scheme in production to ensure all Filament asset URLs are served over HTTPS (required for mixed content security)
+- If you need to override `APP_URL`, set it explicitly in Railway variables
+
 ### 4. Upload Dataset Files
 
 Place your dataset files locally in `storage/app/public/datasets/` organized as:

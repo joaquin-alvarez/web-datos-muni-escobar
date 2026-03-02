@@ -27,12 +27,12 @@ class FilesRelationManager extends RelationManager
             ->schema([
                 Forms\Components\Select::make('format_id')
                     ->label('Formato')
-                    ->relationship('', 'name')
                     ->required()
                     ->reactive()
                     ->options(function () {
                         return \App\Models\Format::pluck('name', 'id');
-                    }),
+                    })
+                    ->searchable(),
                 
                 Forms\Components\FileUpload::make('file')
                     ->label('Archivo')
@@ -126,7 +126,7 @@ class FilesRelationManager extends RelationManager
                         
                         return $data;
                     })
-                    ->using(function (array $data, RelationManager $livewire): void {
+                    ->using(function (array $data, RelationManager $livewire) {
                         $dataset = $livewire->getOwnerRecord();
                         
                         $dataset->formats()->attach($data['format_id'], [
@@ -134,6 +134,8 @@ class FilesRelationManager extends RelationManager
                             'file_url' => $data['file_url'],
                             'file_size' => $data['file_size'] ?? 0,
                         ]);
+                        
+                        return \App\Models\Format::find($data['format_id']);
                     }),
             ])
             ->actions([
@@ -203,8 +205,7 @@ class FilesRelationManager extends RelationManager
                             }
                         }),
                 ]),
-            ])
-            ->defaultSort('pivot.created_at', 'desc');
+            ]);
     }
 
     private function formatBytes(int $bytes): string

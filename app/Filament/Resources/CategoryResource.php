@@ -29,20 +29,26 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->label('Nombre')
-                    ->required()
-                    ->maxLength(255)
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => $set('slug', Str::slug($state))),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255)
-                    ->unique(ignoreRecord: true),
-                Forms\Components\TextInput::make('icon')
-                    ->label('Icono (clase FontAwesome)')
-                    ->placeholder('fa-leaf')
-                    ->maxLength(50),
+                Forms\Components\Section::make('Información de la categoría')
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->label('Nombre')
+                            ->required()
+                            ->maxLength(255)
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => $set('slug', Str::slug($state)))
+                            ->helperText('El nombre visible de la categoría'),
+                        Forms\Components\TextInput::make('slug')
+                            ->required()
+                            ->maxLength(255)
+                            ->unique(ignoreRecord: true)
+                            ->helperText('URL amigable (se genera automáticamente)'),
+                        Forms\Components\TextInput::make('icon')
+                            ->label('Icono (clase FontAwesome)')
+                            ->placeholder('fa-leaf')
+                            ->maxLength(50)
+                            ->helperText('Clase CSS de FontAwesome (ejemplo: fa-leaf, fa-building)'),
+                    ])->columns(2),
             ]);
     }
 
@@ -70,8 +76,11 @@ class CategoryResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\ExportBulkAction::make()
+                        ->label('Exportar seleccionados'),
                 ]),
-            ]);
+            ])
+            ->defaultSort('name');
     }
 
     public static function getPages(): array

@@ -27,7 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('Datos Abiertos Escobar - Admin')
+            ->brandName('Datos Abiertos Escobar - Administración')
             ->colors([
                 'primary' => Color::Blue,
                 'success' => Color::Green,

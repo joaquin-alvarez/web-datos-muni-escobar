@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\DatasetResource\Pages;
+use App\Filament\Resources\DatasetResource\RelationManagers;
 use App\Models\Dataset;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -120,12 +121,20 @@ class DatasetResource extends Resource
                     ->relationship('category', 'name'),
             ])
             ->actions([
+                Tables\Actions\Action::make('share')
+                    ->label('Compartir')
+                    ->icon('heroicon-o-share')
+                    ->color('success')
+                    ->url(fn (Dataset $record): string => route('datasets.show', $record))
+                    ->openUrlInNewTab(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\ExportBulkAction::make()
+                        ->label('Exportar seleccionados'),
                 ]),
             ])
             ->defaultSort('last_modified', 'desc');
@@ -133,7 +142,9 @@ class DatasetResource extends Resource
 
     public static function getRelations(): array
     {
-        return [];
+        return [
+            RelationManagers\FilesRelationManager::class,
+        ];
     }
 
     public static function getPages(): array

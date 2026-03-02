@@ -24,5 +24,15 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
         }
+
+        // Set Spanish as default locale
+        app()->setLocale('es');
+        \Carbon\Carbon::setLocale('es');
+
+        // Share institution data with all views
+        view()->composer('*', function ($view) {
+            $institution = \App\Models\Institution::where('is_active', true)->first();
+            $view->with('institution', $institution);
+        });
     }
 }

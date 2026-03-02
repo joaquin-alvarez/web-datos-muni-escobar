@@ -11,10 +11,10 @@ class AdminUserSeeder extends Seeder
     public function run()
     {
         User::updateOrCreate(
-            ['email' => 'admin@escobar.gob.ar'],
+            ['email' => 'datos@escobar.gob.ar'],
             [
                 'name' => 'Administrador',
-                'password' => Hash::make('password'),
+                'password' => Hash::make('8q1|0]Kx3xA;'),
             ]
         );
     }

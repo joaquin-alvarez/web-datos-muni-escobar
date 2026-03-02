@@ -93,25 +93,33 @@
             <div class="container mx-auto px-4">
                 <div class="flex justify-between items-center text-sm">
                     <div class="flex space-x-6">
-                        <a href="#" class="hover:text-blue-100 transition-colors flex items-center gap-1">
+                        @if($institution && $institution->website)
+                        <a href="{{ $institution->website }}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-100 transition-colors flex items-center gap-1">
                             <i class="fas fa-building text-xs"></i>
                             Municipio
                         </a>
-                        <a href="#" class="hover:text-blue-100 transition-colors flex items-center gap-1">
+                        @endif
+                        <a href="{{ route('government.contact') }}" class="hover:text-blue-100 transition-colors flex items-center gap-1">
                             <i class="fas fa-envelope text-xs"></i>
                             Contacto
                         </a>
                     </div>
                     <div class="flex space-x-3">
-                        <a href="#" class="hover:text-blue-100 transition-colors" aria-label="Facebook">
+                        @if($institution && $institution->facebook_url)
+                        <a href="{{ $institution->facebook_url }}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-100 transition-colors" aria-label="Facebook">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" class="hover:text-blue-100 transition-colors" aria-label="Instagram">
+                        @endif
+                        @if($institution && $institution->instagram_url)
+                        <a href="{{ $institution->instagram_url }}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-100 transition-colors" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="hover:text-blue-100 transition-colors" aria-label="Twitter">
+                        @endif
+                        @if($institution && $institution->twitter_url)
+                        <a href="{{ $institution->twitter_url }}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-100 transition-colors" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -192,18 +200,26 @@
                         Transparencia e información pública al alcance de todos los ciudadanos.
                     </p>
                     <div class="flex gap-3 mt-6">
-                        <a href="#" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                        @if($institution && $institution->facebook_url)
+                        <a href="{{ $institution->facebook_url }}" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                        @endif
+                        @if($institution && $institution->instagram_url)
+                        <a href="{{ $institution->instagram_url }}" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                        @endif
+                        @if($institution && $institution->twitter_url)
+                        <a href="{{ $institution->twitter_url }}" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                        @endif
+                        @if($institution && $institution->youtube_url)
+                        <a href="{{ $institution->youtube_url }}" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
                             <i class="fab fa-youtube"></i>
                         </a>
+                        @endif
                     </div>
                 </div>
                 <div>
@@ -227,18 +243,24 @@
                 <div>
                     <h3 class="text-lg font-semibold font-heading mb-4 text-white">Contacto</h3>
                     <ul class="space-y-3 text-sm text-gray-300">
+                        @if($institution && $institution->email)
                         <li class="flex items-start gap-2">
                             <i class="fas fa-envelope mt-1 text-escobar-green"></i>
-                            <span>datos@escobar.gob.ar</span>
+                            <a href="mailto:{{ $institution->email }}" class="hover:text-white transition-colors">{{ $institution->email }}</a>
                         </li>
+                        @endif
+                        @if($institution && $institution->phone)
                         <li class="flex items-start gap-2">
                             <i class="fas fa-phone mt-1 text-escobar-green"></i>
-                            <span>(0348) 444-1000</span>
+                            <span>{{ $institution->phone }}</span>
                         </li>
+                        @endif
+                        @if($institution && $institution->address)
                         <li class="flex items-start gap-2">
                             <i class="fas fa-map-marker-alt mt-1 text-escobar-green"></i>
-                            <span>Municipio de Escobar<br>Buenos Aires, Argentina</span>
+                            <span>{!! nl2br(e($institution->address)) !!}</span>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>

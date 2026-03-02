@@ -54,21 +54,28 @@ class GovernmentAreaResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('address')
                             ->label('Dirección')
+                            ->required()
                             ->maxLength(255),
                         Forms\Components\TextInput::make('phone')
                             ->label('Teléfono')
+                            ->tel()
+                            ->required()
                             ->maxLength(50),
                         Forms\Components\TextInput::make('email')
                             ->label('Email')
                             ->email()
+                            ->required()
                             ->maxLength(255),
                         Forms\Components\TextInput::make('schedule')
                             ->label('Horario de atención')
-                            ->maxLength(255),
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('Ej: Lunes a Viernes de 8:00 a 14:00 hs'),
                         Forms\Components\TextInput::make('sort_order')
                             ->label('Orden')
                             ->numeric()
-                            ->default(0),
+                            ->default(0)
+                            ->helperText('Orden de visualización en el listado público'),
                     ])->columns(2),
             ]);
     }
@@ -99,6 +106,8 @@ class GovernmentAreaResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\ExportBulkAction::make()
+                        ->label('Exportar seleccionados'),
                 ]),
             ])
             ->defaultSort('sort_order');

@@ -175,18 +175,48 @@
                     Compartir dataset
                 </h3>
                 
-                <div class="flex gap-3">
-                    <a href="#" class="flex-1 bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-md">
+                <div class="flex gap-3 mb-4">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('datasets.show', $dataset)) }}" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="flex-1 bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-md"
+                       title="Compartir en Facebook">
                         <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="#" class="flex-1 bg-blue-400 text-white text-center py-3 rounded-lg hover:bg-blue-500 transition-all hover:scale-105 shadow-md">
+                    <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('datasets.show', $dataset)) }}&text={{ urlencode($dataset->title) }}" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="flex-1 bg-blue-400 text-white text-center py-3 rounded-lg hover:bg-blue-500 transition-all hover:scale-105 shadow-md"
+                       title="Compartir en Twitter">
                         <i class="fab fa-twitter text-xl"></i>
                     </a>
-                    <a href="#" class="flex-1 bg-green-600 text-white text-center py-3 rounded-lg hover:bg-green-700 transition-all hover:scale-105 shadow-md">
+                    <a href="https://wa.me/?text={{ urlencode($dataset->title . ' - ' . route('datasets.show', $dataset)) }}" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="flex-1 bg-green-600 text-white text-center py-3 rounded-lg hover:bg-green-700 transition-all hover:scale-105 shadow-md"
+                       title="Compartir en WhatsApp">
                         <i class="fab fa-whatsapp text-xl"></i>
                     </a>
                 </div>
+                
+                <button onclick="copyToClipboard('{{ route('datasets.show', $dataset) }}')" 
+                        class="w-full bg-gray-100 text-gray-700 py-3 rounded-lg hover:bg-gray-200 transition-all flex items-center justify-center gap-2 font-semibold">
+                    <i class="fas fa-link"></i>
+                    Copiar enlace
+                </button>
             </div>
+            
+            @push('scripts')
+            <script>
+                function copyToClipboard(text) {
+                    navigator.clipboard.writeText(text).then(function() {
+                        alert('Enlace copiado al portapapeles');
+                    }, function(err) {
+                        console.error('Error al copiar: ', err);
+                    });
+                }
+            </script>
+            @endpush
         </div>
     </div>
 </div>

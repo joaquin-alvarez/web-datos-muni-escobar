@@ -18,7 +18,7 @@ if [ -z "$APP_KEY" ]; then
 fi
 
 # Run migrations
-php artisan migrate --force
+php artisan migrate:fresh --force
 
 # Cache configuration
 php artisan config:cache

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('website')->nullable();
             $table->string('facebook_url')->nullable();
             $table->string('instagram_url')->nullable();
-            $table->string('twitter_url')->nullable();
+            $table->string('platform_url')->nullable();
             $table->string('youtube_url')->nullable();
             $table->string('whatsapp_number')->nullable();
             $table->string('logo_url')->nullable();

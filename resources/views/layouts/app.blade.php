@@ -4,38 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Datos Abiertos') - Municipio de Escobar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0d6efd',
-                        secondary: '#198754',
-                        escobar: {
-                            blue: '#0052a3',
-                            'blue-dark': '#003d7a',
-                            'blue-light': '#1976d2',
-                            green: '#00a651',
-                            'green-dark': '#008040',
-                            'green-light': '#4caf50',
-                            dark: '#1a1a1a',
-                            light: '#f8f9fa',
-                            gray: '#6c757d'
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Open Sans', 'system-ui', 'sans-serif'],
-                        'heading': ['Montserrat', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body {
             font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -210,9 +183,9 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                         @endif
-                        @if($institution && $institution->twitter_url)
-                        <a href="{{ $institution->twitter_url }}" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
-                            <i class="fab fa-twitter"></i>
+                        @if($institution && $institution->whatsapp_number)
+                        <a href="{{ $institution->whatsapp_number }}" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                         @endif
                         @if($institution && $institution->youtube_url)

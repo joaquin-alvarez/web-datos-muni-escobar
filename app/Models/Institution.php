@@ -20,7 +20,7 @@ class Institution extends Model
         'website',
         'facebook_url',
         'instagram_url',
-        'twitter_url',
+        'platform_url',
         'youtube_url',
         'whatsapp_number',
         'logo_url',

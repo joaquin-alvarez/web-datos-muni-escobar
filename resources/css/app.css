@@ -8,4 +8,30 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    --color-primary: #0d6efd;
+    --color-secondary: #198754;
+    
+    --color-escobar-blue: #0052a3;
+    --color-escobar-blue-dark: #003d7a;
+    --color-escobar-blue-light: #1976d2;
+    --color-escobar-green: #00a651;
+    --color-escobar-green-dark: #008040;
+    --color-escobar-green-light: #4caf50;
+    --color-escobar-dark: #1a1a1a;
+    --color-escobar-light: #f8f9fa;
+    --color-escobar-gray: #6c757d;
+    
+    --font-family-sans: 'Open Sans', system-ui, sans-serif;
+    --font-family-heading: 'Montserrat', system-ui, sans-serif;
+}
+
+@layer utilities {
+    .gradient-blue {
+        background: linear-gradient(135deg, #0052a3 0%, #1976d2 100%);
+    }
+    
+    .font-heading {
+        font-family: 'Montserrat', sans-serif;
+    }
 }

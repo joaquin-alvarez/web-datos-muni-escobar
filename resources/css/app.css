@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Keyframes ───────────────────────────────────── */
 @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -100,27 +100,27 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .text-shadow {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        text-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
     .text-shadow-lg {
-        text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        text-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     /* Hover effects */
     .hover-lift {
-        transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .hover-lift:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
 
     .hover-glow {
-        transition: box-shadow 0.3s ease;
+        transition: box-shadow 0.2s ease;
     }
     .hover-glow:hover {
-        box-shadow: 0 0 0 4px rgba(0, 82, 163, 0.1), 0 8px 24px rgba(0,0,0,0.1);
+        box-shadow: 0 0 0 3px rgba(0, 82, 163, 0.08), 0 4px 12px rgba(0,0,0,0.06);
     }
 
     /* Glass effect */
@@ -229,8 +229,8 @@ h1, h2, h3, h4, h5, h6 {
         position: fixed;
         top: 0;
         left: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #00a651, #0052a3);
+        height: 2px;
+        background: #0052a3;
         z-index: 9999;
         transition: width 0.1s linear;
     }
@@ -265,26 +265,6 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
-    }
-
-    /* Card shine on hover */
-    .card-shine {
-        position: relative;
-        overflow: hidden;
-    }
-    .card-shine::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 60%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-        transition: left 0.5s ease;
-        z-index: 1;
-    }
-    .card-shine:hover::before {
-        left: 100%;
     }
 
     /* Prevent horizontal scroll on mobile */

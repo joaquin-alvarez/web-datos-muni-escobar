@@ -4,25 +4,14 @@
 
 @section('content')
 <!-- Page Header -->
-<div class="gradient-blue text-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl animate-fade-in-up">
-            <div class="flex items-center gap-3 sm:gap-4 mb-4">
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10">
-                    <i class="fas fa-database text-2xl sm:text-3xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-shadow-lg">Datasets</h1>
-                    <p class="text-sm sm:text-base lg:text-lg text-blue-100 font-light mt-1">Accedé a los datos abiertos del Municipio de Escobar</p>
-                </div>
-            </div>
+<div class="gradient-blue text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-1">Datasets</h1>
+            <p class="text-sm sm:text-base text-blue-100 mb-5">Accedé a los datos abiertos del Municipio de Escobar</p>
 
             <!-- Search Bar -->
-            <form method="GET" action="{{ route('datasets.index') }}" class="mt-6 sm:mt-8">
+            <form method="GET" action="{{ route('datasets.index') }}">
                 @if(request('category'))
                     <input type="hidden" name="category" value="{{ request('category') }}">
                 @endif
@@ -32,19 +21,16 @@
                 <div class="relative">
                     <input type="text" name="search" value="{{ request('search') }}"
                            placeholder="Buscar datasets por título o descripción..."
-                           class="w-full bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl pl-12 pr-4 py-4 text-white placeholder-blue-200 text-sm sm:text-base focus:outline-none focus:bg-white/15 focus:border-white/40 transition-all">
-                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-blue-200"></i>
+                           class="w-full bg-white/10 border border-white/20 rounded-lg pl-10 pr-4 py-3 text-white placeholder-blue-200 text-sm focus:outline-none focus:bg-white/15 focus:border-white/40 transition-colors">
+                    <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-blue-200 text-sm"></i>
                     @if(request('search'))
-                        <a href="{{ route('datasets.index', request()->except('search')) }}" class="absolute right-4 top-1/2 -translate-y-1/2 text-blue-200 hover:text-white transition-colors">
-                            <i class="fas fa-times"></i>
+                        <a href="{{ route('datasets.index', request()->except('search')) }}" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-blue-200 hover:text-white transition-colors">
+                            <i class="fas fa-times text-sm"></i>
                         </a>
                     @endif
                 </div>
             </form>
         </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 40" fill="none" class="w-full"><path d="M0 40V20C240 0 480 0 720 10C960 20 1200 30 1440 20V40H0Z" fill="#f9fafb"/></svg>
     </div>
 </div>
 
@@ -52,7 +38,7 @@
     <div class="flex flex-col lg:flex-row gap-6 lg:gap-8">
         <!-- Sidebar -->
         <aside class="lg:w-72 flex-shrink-0">
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 lg:sticky lg:top-20 border border-gray-100 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 lg:sticky lg:top-20 border border-gray-200 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
                 <h2 class="text-sm font-bold font-heading mb-4 text-gray-500 uppercase tracking-wider flex items-center gap-2">
                     <i class="fas fa-filter text-escobar-blue text-xs"></i>
                     Filtrar por tema
@@ -89,10 +75,10 @@
         <!-- Main Content -->
         <div class="flex-1 min-w-0">
             <!-- Toolbar -->
-            <div class="bg-white rounded-2xl shadow-md p-4 sm:p-5 mb-5 border border-gray-100">
+            <div class="bg-white rounded-xl shadow-sm p-4 sm:p-5 mb-5 border border-gray-200">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                     <div class="flex items-center gap-3">
-                        <span class="font-extrabold font-heading text-2xl sm:text-3xl text-escobar-blue">{{ $datasets->total() }}</span>
+                        <span class="font-bold font-heading text-2xl text-escobar-blue">{{ $datasets->total() }}</span>
                         <span class="text-sm text-gray-500">datasets encontrados</span>
                     </div>
 
@@ -120,7 +106,7 @@
             <!-- Dataset Cards -->
             <div class="space-y-4 stagger-children">
                 @forelse($datasets as $dataset)
-                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-5 sm:p-6 border border-gray-100 hover-glow transition-all animate-fade-in-up">
+                    <div class="group bg-white rounded-xl shadow-sm hover:shadow-md p-5 sm:p-6 border border-gray-200 transition-shadow">
                         <div class="flex flex-col lg:flex-row justify-between gap-4">
                             <div class="flex-1 min-w-0">
                                 <a href="{{ route('datasets.show', $dataset->slug) }}"
@@ -151,7 +137,7 @@
 
                             <div class="flex flex-wrap lg:flex-col items-start gap-2 lg:items-end">
                                 @foreach($dataset->formats as $format)
-                                    <span class="inline-block px-3 py-1.5 rounded-lg text-white text-xs font-bold uppercase shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-default"
+                                    <span class="inline-block px-2.5 py-1 rounded text-white text-xs font-bold uppercase cursor-default"
                                           style="background-color: {{ $format->color }}">
                                         {{ $format->extension }}
                                     </span>
@@ -160,7 +146,7 @@
                         </div>
                     </div>
                 @empty
-                    <div class="bg-white rounded-2xl shadow-md p-10 sm:p-16 text-center border border-gray-100">
+                    <div class="bg-white rounded-xl shadow-sm p-10 sm:p-16 text-center border border-gray-200">
                         <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gray-100 flex items-center justify-center mx-auto mb-5">
                             <i class="fas fa-search text-3xl sm:text-4xl text-gray-300"></i>
                         </div>

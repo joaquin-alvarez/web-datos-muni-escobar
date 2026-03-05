@@ -22,15 +22,11 @@
 <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-10">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         <!-- Main Content -->
-        <div class="lg:col-span-2 animate-fade-in-up">
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-7 lg:p-9 border border-gray-100">
+        <div class="lg:col-span-2">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-7 lg:p-9 border border-gray-200">
                 <!-- Header -->
-                <div class="flex items-start gap-4 mb-6 sm:mb-8">
-                    <div class="bg-gradient-to-br from-escobar-blue to-escobar-blue-light p-3.5 sm:p-4 rounded-2xl shadow-lg flex-shrink-0">
-                        <i class="fas fa-file-alt text-white text-xl sm:text-2xl"></i>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-gray-800 mb-3 leading-tight">{{ $dataset->title }}</h1>
+                <div class="mb-6 sm:mb-8">
+                    <h1 class="text-2xl sm:text-3xl font-bold font-heading text-gray-800 mb-3 leading-tight">{{ $dataset->title }}</h1>
                         <div class="flex flex-wrap gap-2 text-xs">
                             <span class="inline-flex items-center gap-1.5 bg-blue-50 text-escobar-blue px-3 py-1.5 rounded-lg font-semibold">
                                 <i class="fas fa-building text-[10px]"></i>
@@ -45,11 +41,10 @@
                                 {{ $dataset->last_modified->diffForHumans() }}
                             </span>
                         </div>
-                    </div>
                 </div>
 
                 <!-- Description -->
-                <div class="bg-gradient-to-r from-blue-50/80 to-transparent p-5 sm:p-6 rounded-2xl border-l-4 border-escobar-blue mb-8">
+                <div class="bg-gray-50 p-5 sm:p-6 rounded-xl border-l-4 border-escobar-blue mb-8">
                     <h2 class="text-lg sm:text-xl font-bold font-heading mb-3 text-gray-800 flex items-center gap-2">
                         <i class="fas fa-align-left text-escobar-blue text-sm"></i>
                         Descripción
@@ -67,10 +62,10 @@
 
                     <div class="space-y-3">
                         @foreach($dataset->formats as $format)
-                            <div class="group border border-gray-200 rounded-2xl p-4 sm:p-5 hover:border-escobar-blue/30 hover:shadow-md transition-all bg-white">
+                            <div class="group border border-gray-200 rounded-xl p-4 sm:p-5 hover:border-gray-300 transition-colors bg-white">
                                 <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                                     <div class="flex items-center gap-4 flex-1 w-full min-w-0">
-                                        <span class="inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-white text-xs font-bold uppercase w-16 text-center shadow-sm"
+                                        <span class="inline-flex items-center justify-center px-3 py-2.5 rounded-lg text-white text-xs font-bold uppercase w-16 text-center"
                                               style="background-color: {{ $format->color }}">
                                             {{ $format->extension }}
                                         </span>
@@ -85,7 +80,7 @@
                                     </div>
 
                                     <a href="{{ $format->pivot->file_url }}"
-                                       class="gradient-blue text-white px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 font-bold hover:scale-[1.03] w-full sm:w-auto text-sm">
+                                       class="bg-escobar-blue text-white px-5 sm:px-6 py-2.5 rounded-lg hover:bg-escobar-blue-dark transition-colors inline-flex items-center justify-center gap-2 font-semibold w-full sm:w-auto text-sm">
                                         <i class="fas fa-download text-xs"></i>
                                         Descargar
                                     </a>
@@ -98,9 +93,9 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-1 space-y-5 animate-fade-in-up delay-200">
+        <div class="lg:col-span-1 space-y-5">
             <!-- Additional Info -->
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 border border-gray-100">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200">
                 <h3 class="font-bold font-heading text-sm text-gray-500 mb-4 uppercase tracking-wider flex items-center gap-2">
                     <i class="fas fa-info-circle text-escobar-blue text-xs"></i>
                     Información del dataset
@@ -194,7 +189,7 @@
             </div>
 
             <!-- Share -->
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 border border-gray-100">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200">
                 <h3 class="font-bold font-heading text-sm text-gray-500 mb-4 uppercase tracking-wider flex items-center gap-2">
                     <i class="fas fa-share-alt text-escobar-green text-xs"></i>
                     Compartir
@@ -203,26 +198,26 @@
                 <div class="grid grid-cols-3 gap-2 mb-3">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('datasets.show', $dataset)) }}"
                        target="_blank" rel="noopener noreferrer"
-                       class="flex items-center justify-center py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 transition-all shadow-sm"
+                       class="flex items-center justify-center py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                        title="Facebook">
                         <i class="fab fa-facebook-f text-base"></i>
                     </a>
                     <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('datasets.show', $dataset)) }}&text={{ urlencode($dataset->title) }}"
                        target="_blank" rel="noopener noreferrer"
-                       class="flex items-center justify-center py-3 rounded-xl bg-gray-800 text-white hover:bg-black hover:scale-105 transition-all shadow-sm"
+                       class="flex items-center justify-center py-3 rounded-lg bg-gray-800 text-white hover:bg-gray-900 transition-colors"
                        title="X / Twitter">
                         <i class="fab fa-x-twitter text-base"></i>
                     </a>
                     <a href="https://wa.me/?text={{ urlencode($dataset->title . ' - ' . route('datasets.show', $dataset)) }}"
                        target="_blank" rel="noopener noreferrer"
-                       class="flex items-center justify-center py-3 rounded-xl bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition-all shadow-sm"
+                       class="flex items-center justify-center py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors"
                        title="WhatsApp">
                         <i class="fab fa-whatsapp text-base"></i>
                     </a>
                 </div>
 
                 <button onclick="copyDatasetLink()"
-                        class="w-full bg-gray-50 text-gray-600 py-3 rounded-xl hover:bg-gray-100 transition-all flex items-center justify-center gap-2 font-semibold text-sm border border-gray-200">
+                        class="w-full bg-gray-50 text-gray-600 py-3 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 font-semibold text-sm border border-gray-200">
                     <i class="fas fa-link text-xs"></i>
                     Copiar enlace
                 </button>

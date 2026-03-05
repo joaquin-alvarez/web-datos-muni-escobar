@@ -4,40 +4,24 @@
 
 @section('content')
 <!-- Page Header -->
-<div class="gradient-blue text-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl animate-fade-in-up">
-            <div class="flex items-center gap-3 sm:gap-4">
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10">
-                    <i class="fas fa-id-card text-2xl sm:text-3xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-shadow-lg">Funcionarios</h1>
-                    <p class="text-sm sm:text-base lg:text-lg text-blue-100 font-light mt-1">Lista de funcionarios del Municipio de Escobar</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 40" fill="none" class="w-full"><path d="M0 40V20C240 0 480 0 720 10C960 20 1200 30 1440 20V40H0Z" fill="#f9fafb"/></svg>
+<div class="gradient-blue text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-1">Funcionarios</h1>
+        <p class="text-sm sm:text-base text-blue-100">Lista de funcionarios del Municipio de Escobar</p>
     </div>
 </div>
 
 <div class="container mx-auto px-4 py-6 sm:py-8">
     <!-- Counter -->
-    <div class="bg-white rounded-2xl shadow-md p-4 sm:p-5 mb-6 border border-gray-100">
+    <div class="bg-white rounded-xl shadow-sm p-4 sm:p-5 mb-6 border border-gray-200">
         <div class="flex items-center gap-3">
-            <span class="font-extrabold font-heading text-2xl sm:text-3xl text-escobar-blue">{{ $officials->count() }}</span>
+            <span class="font-bold font-heading text-2xl text-escobar-blue">{{ $officials->count() }}</span>
             <span class="text-sm text-gray-500">funcionarios registrados</span>
         </div>
     </div>
 
     <!-- Desktop Table View -->
-    <div class="hidden lg:block bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 animate-fade-in-up">
+    <div class="hidden lg:block bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200">
         <div class="overflow-x-auto">
             <table class="w-full">
                 <thead>
@@ -89,7 +73,7 @@
     <!-- Mobile Card View -->
     <div class="lg:hidden space-y-3 stagger-children">
         @foreach($officials as $official)
-            <div class="bg-white rounded-2xl shadow-md p-4 sm:p-5 border border-gray-100 hover-glow transition-all animate-fade-in-up">
+            <div class="bg-white rounded-xl shadow-sm p-4 sm:p-5 border border-gray-200 hover:shadow-md transition-shadow">
                 <div class="flex items-start gap-3 sm:gap-4 mb-3">
                     <img src="{{ $official->photo_url }}"
                          alt="{{ $official->name }}"
@@ -126,7 +110,7 @@
         @endforeach
     </div>
 
-    <div class="mt-8 bg-gradient-to-r from-blue-50/80 to-transparent p-5 rounded-2xl border-l-4 border-escobar-blue">
+    <div class="mt-8 bg-gray-50 p-5 rounded-xl border-l-4 border-escobar-blue">
         <p class="text-gray-500 text-xs sm:text-sm flex items-start gap-2">
             <i class="fas fa-info-circle text-escobar-blue mt-0.5"></i>
             <span><strong class="text-gray-700">Nota:</strong> La lista incluye funcionarios hasta el nivel de Secretarios, según lo establecido por la normativa vigente.</span>

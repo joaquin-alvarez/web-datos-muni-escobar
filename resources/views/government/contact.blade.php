@@ -4,35 +4,19 @@
 
 @section('content')
 <!-- Page Header -->
-<div class="gradient-blue text-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl animate-fade-in-up">
-            <div class="flex items-center gap-3 sm:gap-4">
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10">
-                    <i class="fas fa-address-book text-2xl sm:text-3xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-shadow-lg">Contacto de Áreas</h1>
-                    <p class="text-sm sm:text-base lg:text-lg text-blue-100 font-light mt-1">Información de contacto de las áreas gubernamentales</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 40" fill="none" class="w-full"><path d="M0 40V20C240 0 480 0 720 10C960 20 1200 30 1440 20V40H0Z" fill="#f9fafb"/></svg>
+<div class="gradient-blue text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-1">Contacto de Áreas</h1>
+        <p class="text-sm sm:text-base text-blue-100">Información de contacto de las áreas gubernamentales</p>
     </div>
 </div>
 
 <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 stagger-children">
         @foreach($areas as $area)
-            <div class="bg-white rounded-2xl shadow-md p-5 sm:p-6 border border-gray-100 hover-lift transition-all animate-fade-in-up">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200 hover:shadow-md transition-shadow">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-11 h-11 rounded-xl gradient-blue flex items-center justify-center shadow-md flex-shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-escobar-blue flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-building text-white text-sm"></i>
                     </div>
                     <h3 class="font-bold font-heading text-gray-800 text-sm sm:text-base leading-snug">{{ $area->name }}</h3>

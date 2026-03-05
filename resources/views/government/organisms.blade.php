@@ -4,49 +4,32 @@
 
 @section('content')
 <!-- Page Header -->
-<div class="gradient-blue text-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl animate-fade-in-up">
-            <div class="flex items-center gap-3 sm:gap-4">
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10">
-                    <i class="fas fa-sitemap text-2xl sm:text-3xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-shadow-lg">Organismos y Entidades</h1>
-                    <p class="text-sm sm:text-base lg:text-lg text-blue-100 font-light mt-1">Estructura orgánica del Municipio de Escobar</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 40" fill="none" class="w-full"><path d="M0 40V20C240 0 480 0 720 10C960 20 1200 30 1440 20V40H0Z" fill="#f9fafb"/></svg>
+<div class="gradient-blue text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-1">Organismos y Entidades</h1>
+        <p class="text-sm sm:text-base text-blue-100">Estructura orgánica del Municipio de Escobar</p>
     </div>
 </div>
 
 <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-12">
     @foreach($organisms as $organism)
         <div class="mb-10 sm:mb-12">
-            <div class="gradient-blue rounded-2xl shadow-xl p-5 sm:p-7 lg:p-8 text-white mb-5 sm:mb-6 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/4"></div>
-                <div class="relative z-10">
+            <div class="gradient-blue rounded-2xl shadow-md p-5 sm:p-7 lg:p-8 text-white mb-5 sm:mb-6">
+                <div>
                     <div class="flex items-center gap-3 sm:gap-4 mb-4">
-                        <div class="bg-white/15 backdrop-blur-sm p-2.5 sm:p-3 rounded-xl border border-white/10">
+                        <div class="bg-white/15 p-2.5 sm:p-3 rounded-lg">
                             <i class="fas fa-landmark text-xl sm:text-2xl"></i>
                         </div>
                         <div>
-                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold font-heading">{{ $organism->name }}</h2>
+                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold font-heading">{{ $organism->name }}</h2>
                             <span class="text-blue-200 font-medium text-xs sm:text-sm uppercase tracking-wider">{{ $organism->type }}</span>
                         </div>
                     </div>
                     <p class="text-blue-100 leading-relaxed mb-4 text-sm sm:text-base max-w-3xl">{{ $organism->description }}</p>
 
                     @if($organism->head_name)
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 inline-flex items-center gap-3 border border-white/10">
-                            <div class="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center">
+                        <div class="bg-white/10 rounded-lg p-3 sm:p-4 inline-flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                                 <i class="fas fa-user text-xs"></i>
                             </div>
                             <div>
@@ -65,7 +48,7 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                                 @foreach(explode('. ', rtrim($organism->functions, '.')) as $func)
                                     @if(trim($func))
-                                        <div class="flex items-start gap-2.5 bg-white/8 rounded-xl p-3">
+                                        <div class="flex items-start gap-2.5 bg-white/8 rounded-lg p-3">
                                             <i class="fas fa-check-circle text-escobar-green mt-0.5 text-xs"></i>
                                             <span class="text-xs sm:text-sm text-blue-50">{{ trim($func) }}</span>
                                         </div>
@@ -80,7 +63,7 @@
             @if($organism->children->count() > 0)
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 ml-4 sm:ml-6 border-l-4 border-escobar-blue/15 pl-4 sm:pl-6">
                     @foreach($organism->children as $child)
-                        <div class="bg-white rounded-2xl shadow-md p-5 sm:p-6 border border-gray-100 hover-lift transition-all">
+                        <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200 hover:shadow-md transition-shadow">
                             <div class="flex items-center gap-3 mb-3 sm:mb-4">
                                 <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-building text-escobar-blue text-sm"></i>
@@ -122,7 +105,7 @@
         </div>
     @endforeach
 
-    <div class="mt-8 bg-gradient-to-r from-blue-50/80 to-transparent p-5 rounded-2xl border-l-4 border-escobar-blue">
+    <div class="mt-8 bg-gray-50 p-5 rounded-xl border-l-4 border-escobar-blue">
         <p class="text-gray-500 text-xs sm:text-sm flex items-start gap-2">
             <i class="fas fa-info-circle text-escobar-blue mt-0.5"></i>
             <span><strong class="text-gray-700">Nota:</strong> La estructura orgánica se presenta parcialmente, hasta el nivel de Secretarías, según lo establecido por la normativa vigente.</span>

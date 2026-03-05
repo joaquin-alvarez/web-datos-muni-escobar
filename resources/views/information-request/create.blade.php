@@ -4,38 +4,20 @@
 
 @section('content')
 <!-- Page Header -->
-<div class="gradient-blue text-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl animate-fade-in-up">
-            <div class="flex items-center gap-3 sm:gap-4">
-                <div class="bg-white/15 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10">
-                    <i class="fas fa-paper-plane text-2xl sm:text-3xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-shadow-lg">Solicitar Información</h1>
-                    <p class="text-sm sm:text-base lg:text-lg text-blue-100 font-light mt-1">Enviá tu solicitud de información pública</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 40" fill="none" class="w-full"><path d="M0 40V20C240 0 480 0 720 10C960 20 1200 30 1440 20V40H0Z" fill="#f9fafb"/></svg>
+<div class="gradient-blue text-white py-8 sm:py-10">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-1">Solicitar Información</h1>
+        <p class="text-sm sm:text-base text-blue-100">Enviá tu solicitud de información pública</p>
     </div>
 </div>
 
 <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-12">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         <!-- Form -->
-        <div class="lg:col-span-2 animate-fade-in-up">
+        <div class="lg:col-span-2">
             @if(session('success'))
-                <div class="bg-green-50 border border-green-200 rounded-2xl p-5 mb-6 flex items-start gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-check text-green-600"></i>
-                    </div>
+                <div class="bg-green-50 border border-green-200 rounded-lg p-5 mb-6 flex items-start gap-3">
+                    <i class="fas fa-check-circle text-green-500 text-lg mt-0.5 flex-shrink-0"></i>
                     <div>
                         <h3 class="font-bold text-green-800 font-heading text-sm">¡Solicitud enviada!</h3>
                         <p class="text-green-700 text-xs sm:text-sm mt-1">{{ session('success') }}</p>
@@ -43,7 +25,7 @@
                 </div>
             @endif
 
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-7 lg:p-9 border border-gray-100">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-7 lg:p-9 border border-gray-200">
                 <h2 class="text-lg sm:text-xl font-bold font-heading text-gray-800 mb-5 sm:mb-6 flex items-center gap-2">
                     <i class="fas fa-edit text-escobar-blue text-sm"></i>
                     Formulario de solicitud
@@ -100,7 +82,7 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="gradient-blue text-white px-7 py-3.5 rounded-xl hover:shadow-lg hover:shadow-escobar-blue/25 transition-all inline-flex items-center justify-center gap-2.5 font-bold hover:scale-[1.03] w-full sm:w-auto text-sm">
+                    <button type="submit" class="bg-escobar-blue text-white px-6 py-3 rounded-lg hover:bg-escobar-blue-dark transition-colors inline-flex items-center justify-center gap-2 font-semibold w-full sm:w-auto text-sm">
                         <i class="fas fa-paper-plane text-xs"></i>
                         Enviar solicitud
                     </button>
@@ -109,11 +91,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-1 space-y-5 animate-fade-in-up delay-200">
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 border border-gray-100">
-                <div class="w-11 h-11 rounded-xl gradient-blue flex items-center justify-center shadow-md mb-4">
-                    <i class="fas fa-shield-alt text-white text-sm"></i>
-                </div>
+        <div class="lg:col-span-1 space-y-5">
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200">
                 <h3 class="font-bold font-heading text-base text-gray-800 mb-3">
                     Tu derecho a la información
                 </h3>
@@ -129,10 +108,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 border border-gray-100">
-                <div class="w-11 h-11 rounded-xl gradient-green flex items-center justify-center shadow-md mb-4">
-                    <i class="fas fa-list-check text-white text-sm"></i>
-                </div>
+            <div class="bg-white rounded-xl shadow-sm p-5 sm:p-6 border border-gray-200">
                 <h3 class="font-bold font-heading text-base text-gray-800 mb-4">
                     ¿Qué podés solicitar?
                 </h3>

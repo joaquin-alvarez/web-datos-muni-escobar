@@ -476,22 +476,40 @@
     ]
   },
   {
-    "slug": "estadisticas-vitales-2005-2022-escobar",
+    "slug": "paradas-mi-bus",
     "files": [
       {
-        "name": "Estadísticas vitales 2005 -2022 Escobar.xlsx",
-        "size": 12927
+        "name": "paradas_mi_bus",
+        "geojson": {
+          "filename": "paradas_mi_bus.geojson",
+          "size": 3507
+        },
+        "shp": {
+          "filename": "paradas_mi_bus.shp",
+          "size": 492
+        }
       }
     ]
   },
   {
-    "slug": "poblacion-por-sexo-segun-radio-censal-censo-2022-radio",
+    "slug": "paradas-seguras-del-partido-de-escobar",
     "files": [
       {
-        "name": "Población por sexo según radio Censal - Censo_2022_radio.csv",
-        "size": 6824
+        "name": "paradas_seguras",
+        "geojson": {
+          "filename": "paradas_seguras.geojson",
+          "size": 12734
+        },
+        "shp": {
+          "filename": "paradas_seguras.shp",
+          "size": 1584
+        }
       }
     ]
+  },
+  {
+    "slug": "estadisticas-vitales-2005-2022-escobar",
+    "files": []
   },
   {
     "slug": "farmacias-escobar",
@@ -508,6 +526,15 @@
       {
         "name": "centros_medicos_unificado_escobar_version_completa.xlsx",
         "size": 28252
+      }
+    ]
+  },
+  {
+    "slug": "registro-abierto-de-politicas-de-genero-ninez-y-asistencia-critica",
+    "files": [
+      {
+        "name": "Registro Abierto de Políticas de Género, Niñez y Asistencia Crítica - Ciclo 2025.pdf",
+        "size": 276127
       }
     ]
   }

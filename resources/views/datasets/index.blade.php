@@ -33,7 +33,6 @@
                        class="block px-4 py-3 rounded-lg transition-all font-medium {{ !request('category') ? 'gradient-blue text-white shadow-md' : 'text-gray-700 hover:bg-blue-50 hover:text-escobar-blue' }}">
                         <i class="fas fa-list w-5"></i>
                         Todos los datasets
-                        <span class="float-right text-sm font-bold bg-white/20 px-2 py-0.5 rounded">{{ $totalCount }}</span>
                     </a>
                     
                     @foreach($categories as $category)

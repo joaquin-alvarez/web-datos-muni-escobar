@@ -145,13 +145,18 @@ Dataset: plazas-y-parques-del-partido-de-escobar
   plazas_y_parques.geojson: 32676 bytes
   plazas_y_parques.shp: 10244 bytes
 
+Dataset: paradas-mi-bus
+--------------------------------------------------------------------------------
+  paradas_mi_bus.geojson: 3507 bytes
+  paradas_mi_bus.shp: 492 bytes
+
+Dataset: paradas-seguras-del-partido-de-escobar
+--------------------------------------------------------------------------------
+  paradas_seguras.geojson: 12734 bytes
+  paradas_seguras.shp: 1584 bytes
+
 Dataset: estadisticas-vitales-2005-2022-escobar
 --------------------------------------------------------------------------------
-  Estadísticas vitales 2005 -2022 Escobar.xlsx: 12927 bytes
-
-Dataset: poblacion-por-sexo-segun-radio-censal-censo-2022-radio
---------------------------------------------------------------------------------
-  Población por sexo según radio Censal - Censo_2022_radio.csv: 6824 bytes
 
 Dataset: farmacias-escobar
 --------------------------------------------------------------------------------
@@ -160,3 +165,7 @@ Dataset: farmacias-escobar
 Dataset: centros-medicos-unificado-escobar-version-completa
 --------------------------------------------------------------------------------
   centros_medicos_unificado_escobar_version_completa.xlsx: 28252 bytes
+
+Dataset: registro-abierto-de-politicas-de-genero-ninez-y-asistencia-critica
+--------------------------------------------------------------------------------
+  Registro Abierto de Políticas de Género, Niñez y Asistencia Crítica - Ciclo 2025.pdf: 276127 bytes

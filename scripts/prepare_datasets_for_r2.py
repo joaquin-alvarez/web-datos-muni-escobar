@@ -129,17 +129,21 @@ DATASETS = {
         'source': 'Ambiente y Biodiversidad/Plazas_parques',
         'files': ['plazas_y_parques']
     },
+    'paradas-mi-bus': {
+        'source': 'Movilidad y tránsito/paradas_mi_bus',
+        'files': ['paradas_mi_bus']
+    },
+    'paradas-seguras-del-partido-de-escobar': {
+        'source': 'Movilidad y tránsito/paradas_seguras',
+        'files': ['paradas_seguras']
+    },
 }
 
-# Non-shapefile datasets (xlsx, csv)
+# Non-shapefile datasets (xlsx, csv, pdf)
 NON_GEO_DATASETS = {
     'estadisticas-vitales-2005-2022-escobar': {
-        'source': 'Monitoreo Institucional',
+        'source': 'Salud',
         'files': ['Estadísticas vitales 2005 -2022 Escobar.xlsx']
-    },
-    'poblacion-por-sexo-segun-radio-censal-censo-2022-radio': {
-        'source': 'Monitoreo Institucional',
-        'files': ['Población por sexo según radio Censal - Censo_2022_radio.csv']
     },
     'farmacias-escobar': {
         'source': 'Salud',
@@ -148,6 +152,10 @@ NON_GEO_DATASETS = {
     'centros-medicos-unificado-escobar-version-completa': {
         'source': 'Salud',
         'files': ['centros_medicos_unificado_escobar_version_completa.xlsx']
+    },
+    'registro-abierto-de-politicas-de-genero-ninez-y-asistencia-critica': {
+        'source': 'Derechos Humanos',
+        'files': ['Registro Abierto de Políticas de Género, Niñez y Asistencia Crítica - Ciclo 2025.pdf']
     },
 }
 

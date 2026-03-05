@@ -293,9 +293,6 @@
                 <p class="text-xs text-gray-500">
                     &copy; {{ date('Y') }} Municipio de Escobar. Todos los derechos reservados.
                 </p>
-                <p class="text-xs text-gray-600">
-                    Hecho con <i class="fas fa-heart text-red-400 mx-1"></i> para la comunidad de Escobar
-                </p>
             </div>
         </div>
     </footer>

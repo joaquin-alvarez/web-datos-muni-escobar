@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DatasetController;
 use App\Http\Controllers\GlossaryController;
 use App\Http\Controllers\GovernmentController;
 use App\Http\Controllers\InformationRequestController;
 
-Route::get('/', [DatasetController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/datasets', [DatasetController::class, 'index'])->name('datasets.index');
 Route::get('/dataset/{slug}', [DatasetController::class, 'show'])->name('datasets.show');
 

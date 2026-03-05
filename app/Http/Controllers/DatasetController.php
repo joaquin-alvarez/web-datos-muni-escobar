@@ -15,6 +15,14 @@ class DatasetController extends Controller
         if ($request->has('category') && $request->category != '') {
             $query->filterByCategory($request->category);
         }
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('description', 'like', "%{$search}%");
+            });
+        }
         
         $sort = $request->get('sort', 'modified');
         $query->orderBySort($sort);
